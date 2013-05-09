@@ -1,0 +1,201 @@
+<!doctype html>
+<html>
+<head>
+	<title>CRM客服助手</title>
+	<meta charset="utf-8"/>
+	<script src="http://a.tbcdn.cn/s/kissy/1.3.0/kissy.js"></script>
+	
+	<!--crm dpl-->
+	<link rel="stylesheet" type="text/css" href="../../build/crm.css" />
+	<script src="../../build/crm.js"></script>
+	
+	<!--docs-->
+	<link rel="stylesheet" type="text/css" href="../src/docs.css" />
+	<script src="../src/docs.js"></script>
+	
+	<!--代码高亮插件-->
+	<script src="../src/1k/1k.js"></script>
+	<script src="../src/1k/highlight.js"></script>
+	
+	
+	
+</head>
+<body class="crm-doc">
+
+
+
+<div class="demo-page-item">
+	<h1>box默认样式</h1>
+	<div class="demo-page-item-content">
+
+
+<section>
+<p>一个完整的box包含hd（标题）,bd（内容）,ft（扩展）三部分，其中ft为非必要部分</p>
+<p><img style="border:1px solid #ccc;" src="http://img04.taobaocdn.com/tps/i4/T16DQ5XkpcXXbf0vLR-585-326.png" /></p>
+</section>
+
+
+<section>
+<h3>默认的box样式</h3>
+<div class="ui-box">
+	<div class="hd"><h3>默认的box样式</h3></div>
+	<div class="bd"><p>这是内容</p><p>这是内容</p></div>
+	<div class="ft">
+		<ul class="act">
+			<li>
+				<a href="#">更多&gt;</a>
+			</li>
+		</ul>
+	</div>
+</div>
+<textarea class="lang-html">
+	<div class="ui-box">
+		<div class="hd"><h3>默认的box样式</h3></div>
+		<div class="bd"><p>这是内容</p><p>这是内容</p></div>
+		<div class="ft">
+			<ul class="act">
+				<li>
+					<a href="#">更多&gt;</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+</textarea>
+</section>
+
+
+
+
+
+<section>
+<h3>默认的box样式（去掉ft扩展部分，是不是感觉代码少了很多？）</h3>
+<div class="ui-box">
+	<div class="hd"><h3>默认的box样式</h3></div>
+	<div class="bd"><p>这是内容</p><p>这是内容</p></div>
+</div>
+<textarea class="lang-html">
+	<div class="ui-box">
+		<div class="hd"><h3>默认的box样式</h3></div>
+		<div class="bd"><p>这是内容</p><p>这是内容</p></div>
+	</div>
+</textarea>
+</section>
+
+
+
+
+<section>
+<h3>圆角box样式</h3>
+<div class="ui-box  ui-box-radius">
+	<div class="hd"><h3>默认的box样式</h3></div>
+	<div class="bd"><p>这是内容</p><p>这是内容</p></div>
+	<div class="ft">
+		<ul class="act">
+			<li>
+				<a href="#">更多&gt;</a>
+			</li>
+		</ul>
+	</div>
+</div>
+<textarea class="lang-html">
+	<div class="ui-box ui-box-radius">
+		<div class="hd"><h3>默认的box样式</h3></div>
+		<div class="bd"><p>这是内容</p><p>这是内容</p></div>
+		<div class="ft">
+			<ul class="act">
+				<li>
+					<a href="#">更多&gt;</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+</textarea>
+</section>
+
+
+
+<section>
+<h3>两个区块相连</h3>
+<div class="ui-box">
+	<div class="hd"><h3>默认的box样式</h3></div>
+	<div class="bd"><p>这是内容</p></div>
+</div>
+<div class="ui-box ui-box-follow ">
+	<div class="hd"><h3>默认的box样式</h3></div>
+	<div class="bd"><p>这是内容</p></div>
+</div>
+<textarea class="lang-html">
+	<div class="ui-box">
+		<div class="hd"><h3>默认的box样式</h3></div>
+		<div class="bd"><p>这是内容</p></div>
+	</div>
+	<div class="ui-box ui-box-follow ">
+		<div class="hd"><h3>默认的box样式</h3></div>
+		<div class="bd"><p>这是内容</p></div>
+	</div>
+</textarea>
+</section>
+
+
+
+
+
+<section>
+<h3>如何自定义一个box样式</h3>
+<p>如果以上样式的box都不能满足你的需求，so easy! 你可以很容易新建一套box的样式</p>
+<textarea class="lang-html">
+<style>
+.box-custom .hd { 
+	background-color: #ffe8d9;
+    border: 1px solid #ff6600;
+	border-bottom: none;
+}
+.box-custom .bd {
+	background-color: #fff;
+    border: 1px solid #ff6600;
+}
+</style>
+<div class="ui-box box-custom">
+	<div class="hd"><h3>box</h3></div>
+	<div class="bd"><p>是不是很容易呢？</p></div>
+	<div class="ft">
+		<ul class="act">
+			<li>
+				<a href="#">更多&gt;</a>
+			</li>
+		</ul>
+	</div>
+</div>
+</textarea>
+<style>
+.box-custom .hd { 
+	background-color: #390;
+    border: 1px solid #390;
+	border-bottom: none;
+}
+.box-custom .bd {
+	background-color: #fff;
+    border: 1px solid #390;
+}
+</style>
+<div class="ui-box box-custom">
+	<div class="hd"><h3>box</h3></div>
+	<div class="bd"><p>是不是很容易呢？</p></div>
+	<div class="ft">
+		<ul class="act">
+			<li>
+				<a href="#">更多&gt;</a>
+			</li>
+		</ul>
+	</div>
+</div>
+</section>
+
+
+
+	
+</div>
+</div>
+
+</body>
+</html>

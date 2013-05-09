@@ -1,0 +1,46 @@
+/* mixin */
+.ui-paging {
+  *zoom: 1;
+}
+.ui-paging:before,
+.ui-paging:after {
+  display: table;
+  content: "";
+}
+.ui-paging:after {
+  clear: both;
+}
+.ui-paging-item,
+.ui-paging-skip {
+  float: left;
+  padding: 2px 5px;
+}
+.ui-paging-item {
+  margin-left: 5px;
+  cursor: pointer;
+}
+.ui-paging-item:hover {
+  background-color: #eee;
+  text-decoration: none;
+}
+/* current */
+.ui-paging-current {
+  background-color: #eee;
+  color: #f60;
+}
+/* break */
+.ui-paging-break {
+  color: #bbb;
+}
+.ui-paging-break:hover {
+  color: #bbb;
+  background-color: transparent;
+  cursor: text;
+}
+/*  边框风格 */
+.ui-paging-box .ui-paging-item {
+  border: 1px solid #ccc;
+}
+.ui-paging-box .ui-paging-break {
+  border: 1px solid transparent;
+}

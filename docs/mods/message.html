@@ -1,0 +1,586 @@
+<!doctype html>
+<html>
+<head>
+	<title>CRM客服助手</title>
+	<meta charset="utf-8"/>
+	<script src="http://a.tbcdn.cn/s/kissy/1.3.0/kissy.js"></script>
+	
+	<!--crm dpl-->
+	<link rel="stylesheet" type="text/css" href="../../build/crm.css" />
+	<script src="../../build/crm.js"></script>
+	
+	<!--docs-->
+	<link rel="stylesheet" type="text/css" href="../src/docs.css" />
+	<script src="../src/docs.js"></script>
+	
+	<!--代码高亮插件-->
+	<script src="../src/1k/1k.js"></script>
+	<script src="../src/1k/highlight.js"></script>
+	
+	
+	
+</head>
+<body class="crm-doc">
+
+
+
+<div class="demo-page-item">
+	<h1>message使用示例</h1>
+	<div class="demo-page-item-content">
+
+	
+	<section>
+		<h3>默认样式</h3>
+		
+		<p>下面展示了自带的几种在不同场景下使用的消息提示。</p>
+		
+		<div class="ui-msg ui-msg-ok">
+			<div class="ui-msg-box" >
+				<i class="icon-ok-sign"></i>
+				<div class="ui-msg-text">正确 提示信息提示信息 比如：交易成功</div>
+			</div>
+		</div>
+		
+		<textarea class="lang-html">
+		<div class="ui-msg ui-msg-ok">
+			<div class="ui-msg-box" >
+				<i class="icon-ok-sign"></i>
+				<div class="ui-msg-text">正确 提示信息提示信息 比如：交易成功</div>
+			</div>
+		</div>
+		</textarea>
+
+		
+		<div class="ui-msg ui-msg-error">
+			<div class="ui-msg-box" >
+				<i class="icon-remove-circle"></i>
+				<div class="ui-msg-text">错误 提示信息提示信息 比如：请正确选择省市区</div>
+			</div>
+		</div>
+		<textarea class="lang-html">
+		<div class="ui-msg ui-msg-error">
+			<div class="ui-msg-box" >
+				<i class="icon-remove-circle"></i>
+				<div class="ui-msg-text">错误 提示信息提示信息 比如：请正确选择省市区</div>
+			</div>
+		</div>
+		</textarea>
+		
+		
+		<div class="ui-msg ui-msg-error">
+			<div class="ui-msg-box" >
+				<i class="icon-minus-sign"></i>
+				<div class="ui-msg-text">禁止 提示信息提示信息</div>
+			</div>
+		</div>
+		<textarea class="lang-html">
+		<div class="ui-msg ui-msg-error">
+			<div class="ui-msg-box" >
+				<i class="icon-minus-sign"></i>
+				<div class="ui-msg-text">禁止 提示信息提示信息</div>
+			</div>
+		</div>
+		</textarea>
+		
+		
+		
+		<div class="ui-msg ui-msg-attention">
+			<div class="ui-msg-box" >
+				<i class="icon-info-sign"></i>
+				<div class="ui-msg-text">提示 提示信息提示信息 比如：建议您联系卖家咨询货物是否已经发出</div>
+			</div>
+		</div>
+		<textarea class="lang-html">
+		<div class="ui-msg ui-msg-attention">
+			<div class="ui-msg-box" >
+				<i class="icon-info-sign"></i>
+				<div class="ui-msg-text">提示 提示信息提示信息 比如：建议您联系卖家咨询货物是否已经发出</div>
+			</div>
+		</div>
+		</textarea>
+
+		
+		<div class="ui-msg ui-msg-tips">
+			<div class="ui-msg-box" >
+				<i class="icon-lightbulb"></i>
+				<div class="ui-msg-text">提醒 是一段提示信息内容！比如：您可以在该类目下直接发宝贝哦</div>
+			</div>
+		</div>
+		<textarea class="lang-html">
+		<div class="ui-msg ui-msg-tips">
+			<div class="ui-msg-box" >
+				<i class="icon-lightbulb"></i>
+				<div class="ui-msg-text">提醒 是一段提示信息内容！比如：您可以在该类目下直接发宝贝哦</div>
+			</div>
+		</div>
+		</textarea>
+		
+		
+		
+		<div class="ui-msg ui-msg-question">
+			<div class="ui-msg-box" >
+				<i class="icon-question-sign"></i>
+				<div class="ui-msg-text">疑问 是一段提示信息内容！比如：什么是宝贝成色</div>
+			</div>
+		</div>
+		<textarea class="lang-html">
+		<div class="ui-msg ui-msg-question">
+			<div class="ui-msg-box" >
+				<i class="icon-question-sign"></i>
+				<div class="ui-msg-text">疑问 是一段提示信息内容！比如：什么是宝贝成色</div>
+			</div>
+		</div>
+		</textarea>
+		
+		
+		
+	</section>
+	
+	<section>
+		<h3>没有背景边框</h3>
+		<p>没有边框很背景，只有前面的inco，这种提示显得更清爽。只需要加上 <code>ui-msg-naked</code> 即可实现这种效果</p>
+		<div class="ui-msg ui-msg-ok ui-msg-naked">
+			<div class="ui-msg-box" >
+				<i class="icon-ok-sign"></i>
+				<div class="ui-msg-text">正确提示信息提示信息</div>
+			</div>
+		</div>
+		<textarea class="lang-html">
+		<div class="ui-msg ui-msg-ok ui-msg-naked">
+			<div class="ui-msg-box" >
+				<i class="icon-ok-sign"></i>
+				<div class="ui-msg-text">正确提示信息提示信息</div>
+			</div>
+		</div>
+		</textarea>
+		
+	</section>
+	
+	
+	<section>
+		<h3>block</h3>
+		<p>如果你觉得边框背景能占满一行比较合适，加上 <code>ui-msg-block</code> 即可实现</p>
+		<div class="ui-msg ui-msg-ok ui-msg-block">
+			<div class="ui-msg-box" >
+				<i class="icon-ok-sign"></i>
+				<div class="ui-msg-text">我占满一行了</div>
+			</div>
+		</div>
+		<textarea class="lang-html">
+		<div class="ui-msg ui-msg-ok ui-msg-block">
+			<div class="ui-msg-box" >
+				<i class="icon-ok-sign"></i>
+				<div class="ui-msg-text">我占满一行了</div>
+			</div>
+		</div>
+		</textarea>
+	</section>
+	
+	
+	<section>
+		<h3>inline</h3>
+		<p>加上 <code>ui-msg-inline</code> 可以让提示信息在同一行显示</p>
+		我们在一起在一起
+		<div class="ui-msg ui-msg-ok ui-msg-inline">
+			<div class="ui-msg-box" >
+				<i class="icon-ok-sign"></i>
+				<div class="ui-msg-text">在一起在一起</div>
+			</div>
+		</div>
+		我们在一起在一起
+		<textarea class="lang-html">
+		我们在一起在一起
+		<div class="ui-msg ui-msg-ok ui-msg-inline">
+			<div class="ui-msg-box" >
+				<i class="icon-ok-sign"></i>
+				<div class="ui-msg-text">在一起在一起</div>
+			</div>
+		</div>
+		我们在一起在一起
+		</textarea>
+		
+	</section>
+	
+	
+	
+	<section>
+		<h3>页面级别提示</h3>
+		<p>加上 <code>ui-msg-page</code> 即可使用大号的信息提示框</p>
+		<div class="ui-msg ui-msg-ok ui-msg-page">
+			<div class="ui-msg-box" >
+				<i class="icon-ok-sign"></i>
+				<div class="ui-msg-text">正确提示信息提示信息</div>
+			</div>
+		</div>
+		<textarea class="lang-html">
+		<div class="ui-msg ui-msg-ok ui-msg-page">
+			<div class="ui-msg-box" >
+				<i class="icon-ok-sign"></i>
+				<div class="ui-msg-text">正确提示信息提示信息</div>
+			</div>
+		</div>
+		</textarea>
+		
+	</section>
+	
+	
+	<section>
+		
+		<h3>带扩展内容</h3>
+		
+		<div class="ui-msg ui-msg-ok ui-msg-page">
+			<div class="ui-msg-box" >
+				<i class="icon-ok-sign"></i>
+				<div class="ui-msg-text">正确提示信息提示信息</div>
+				<div class="ui-msg-explain">
+					视觉规范和交互规范，以用户研究作为基础。比如全站的色调，基本操作的交互等，都取决于对主流客户群心智模型的研究。
+					<br>
+					<a href="#">你确定吗？</a> | <a href="#">就这样吧</a>
+				</div>
+			</div>
+		</div>
+		<textarea class="lang-html">
+		<div class="ui-msg ui-msg-ok ui-msg-page">
+			<div class="ui-msg-box" >
+				<i class="icon-ok-sign"></i>
+				<div class="ui-msg-text">正确提示信息提示信息</div>
+				<div class="ui-msg-explain">
+					视觉规范和交互规范，以用户研究作为基础。比如全站的色调，基本操作的交互等，都取决于对主流客户群心智模型的研究。
+					<br>
+					<a href="#">你确定吗？</a> | <a href="#">就这样吧</a>
+				</div>
+			</div>
+		</div>
+		</textarea>
+	</section>
+	
+	
+	<section>
+		
+		<h3>按场景（颜色）分类</h3>
+		
+		<table class="crm-doc-table">
+			<colgroup align="center">
+				<col width="15%">
+				<col width="15%">
+				<col width="50%"/>
+				<col width="20%"/>
+			</colgroup>
+			<thead>
+				<tr>
+					<th>class</th>
+					<th>说明</th>
+					<th>示例</th>
+					<th>显示效果</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>ui-msg-ok</td>
+					<td>正确<p>比如：交易成功</p></td>
+					<td>
+						<textarea class="lang-html">
+							<div class="ui-msg ui-msg-ok">
+								<div class="ui-msg-box" >
+									<i class="icon-ok-sign"></i>
+									<div class="ui-msg-text">正确提示信息提示信息</div>
+								</div>
+							</div>
+						</textarea>
+					</td>
+					<td>
+						<div class="ui-msg ui-msg-ok">
+							<div class="ui-msg-box" >
+								<i class="icon-ok-sign"></i>
+								<div class="ui-msg-text">正确提示信息提示信息</div>
+							</div>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td>ui-msg-error</td>
+					<td>错误<p>比如：请正确选择省市区</p></td>
+					<td>
+						<textarea class="lang-html">
+							<div class="ui-msg ui-msg-error">
+								<div class="ui-msg-box" >
+									<i class="icon-ok-sign"></i>
+									<div class="ui-msg-text">错误信息</div>
+								</div>
+							</div>
+						</textarea>
+					</td>
+					<td>
+						<div class="ui-msg ui-msg-error">
+							<div class="ui-msg-box" >
+								<i class="icon-ok-sign"></i>
+								<div class="ui-msg-text">错误信息</div>
+							</div>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td>ui-msg-attention</td>
+					<td>提示<p>比如：建议您联系卖家咨询货物是否已经发出</p></td>
+					<td>
+						<textarea class="lang-html">
+							<div class="ui-msg ui-msg-attention">
+								<div class="ui-msg-box" >
+									<i class="icon-ok-sign"></i>
+									<div class="ui-msg-text">提示</div>
+								</div>
+							</div>
+						</textarea>
+					</td>
+					<td>
+						<div class="ui-msg ui-msg-attention">
+							<div class="ui-msg-box" >
+								<i class="icon-ok-sign"></i>
+								<div class="ui-msg-text">提示</div>
+							</div>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td>ui-msg-tips</td>
+					<td>提醒<p>比如：您可以在该类目下直接发宝贝哦</p></td>
+					<td>
+						<textarea class="lang-html">
+							<div class="ui-msg ui-msg-tips">
+								<div class="ui-msg-box" >
+									<i class="icon-ok-sign"></i>
+									<div class="ui-msg-text">提醒</div>
+								</div>
+							</div>
+						</textarea>
+					</td>
+					<td>
+						<div class="ui-msg ui-msg-tips">
+							<div class="ui-msg-box" >
+								<i class="icon-ok-sign"></i>
+								<div class="ui-msg-text">提醒</div>
+							</div>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td>ui-msg-question</td>
+					<td>疑问<p>比如：什么是宝贝成色？</p></td>
+					<td>
+						<textarea class="lang-html">
+							<div class="ui-msg ui-msg-question">
+								<div class="ui-msg-box" >
+									<i class="icon-ok-sign"></i>
+									<div class="ui-msg-text">疑问</div>
+								</div>
+							</div>
+						</textarea>
+					</td>
+					<td>
+						<div class="ui-msg ui-msg-question">
+							<div class="ui-msg-box" >
+								<i class="icon-ok-sign"></i>
+								<div class="ui-msg-text">疑问</div>
+							</div>
+						</div>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+		
+	</section>
+
+	
+	
+	
+	
+	
+	
+	<section>
+		
+		<h3>功能展示</h3>
+		
+		<table class="crm-doc-table">
+			<colgroup align="center">
+				<col width="15%">
+				<col width="15%">
+				<col width="50%"/>
+				<col width="20%"/>
+			</colgroup>
+			<thead>
+				<tr>
+					<th>class</th>
+					<th>说明</th>
+					<th>示例</th>
+					<th>显示效果</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>默认效果</td>
+					<td>提示信息独占一行，但box部分的长度自适应内容的长度</td>
+					<td>
+						<textarea class="lang-html">
+							<div class="ui-msg ui-msg-ok">
+								<div class="ui-msg-box" >
+									<i class="icon-ok-sign"></i>
+									<div class="ui-msg-text">提示</div>
+								</div>
+							</div>
+						</textarea>
+					</td>
+					<td>我在前
+						<div class="ui-msg ui-msg-ok">
+							<div class="ui-msg-box" >
+								<i class="icon-ok-sign"></i>
+								<div class="ui-msg-text">提示信息</div>
+							</div>
+						</div>
+						我在后
+					</td>
+				</tr>
+				<tr>
+					<td>ui-msg-inline</td>
+					<td>提示信息内联显示</td>
+					<td>
+						<textarea class="lang-html">
+							<div class="ui-msg ui-msg-ok ui-msg-inline">
+								<div class="ui-msg-box" >
+									<i class="icon-ok-sign"></i>
+									<div class="ui-msg-text">正确提示信息提示信息</div>
+								</div>
+							</div>
+						</textarea>
+					</td>
+					<td>我在前
+						<div class="ui-msg ui-msg-ok ui-msg-inline">
+							<div class="ui-msg-box" >
+								<i class="icon-ok-sign"></i>
+								<div class="ui-msg-text">提示信息</div>
+							</div>
+						</div>
+						我在后
+					</td>
+				</tr>
+				<tr>
+					<td>ui-msg-block</td>
+					<td>提示信息box部分也独占一行，看看与“默认效果”的区别</td>
+					<td>
+						<textarea class="lang-html">
+							<div class="ui-msg ui-msg-ok ui-msg-block">
+								<div class="ui-msg-box" >
+									<i class="icon-ok-sign"></i>
+									<div class="ui-msg-text">正确提示信息提示信息</div>
+								</div>
+							</div>
+						</textarea>
+					</td>
+					<td>
+						我在前
+						<div class="ui-msg ui-msg-ok ui-msg-block">
+							<div class="ui-msg-box" >
+								<i class="icon-ok-sign"></i>
+								<div class="ui-msg-text">提示信息</div>
+							</div>
+						</div>
+						我在后
+					</td>
+				</tr>
+				<tr>
+					<td>ui-msg-naked</td>
+					<td>没有边框和背景</td>
+					<td>
+						<textarea class="lang-html">
+							<div class="ui-msg ui-msg-ok ui-msg-naked">
+								<div class="ui-msg-box" >
+									<i class="icon-ok-sign"></i>
+									<div class="ui-msg-text">正确提示信息提示信息</div>
+								</div>
+							</div>
+						</textarea>
+					</td>
+					<td>
+						我在前
+						<div class="ui-msg ui-msg-ok ui-msg-naked">
+							<div class="ui-msg-box" >
+								<i class="icon-ok-sign"></i>
+								<div class="ui-msg-text">提示信息</div>
+							</div>
+						</div>
+						我在后
+					</td>
+				</tr>
+				<tr>
+					<td>ui-msg-page</td>
+					<td>其实这个就是大号的信息提示，用于页面级别的提示</td>
+					<td>
+						<textarea class="lang-html">
+							<div class="ui-msg ui-msg-ok ui-msg-page">
+								<div class="ui-msg-box" >
+									<i class="icon-ok-sign"></i>
+									<div class="ui-msg-text">正确提示信息提示信息</div>
+								</div>
+							</div>
+						</textarea>
+					</td>
+					<td>
+						我在前
+						<div class="ui-msg ui-msg-ok ui-msg-page">
+							<div class="ui-msg-box" >
+								<i class="icon-ok-sign"></i>
+								<div class="ui-msg-text">提示信息</div>
+							</div>
+						</div>
+						我在后
+					</td>
+				</tr>
+				<tr>
+					<td>ui-msg-page 扩展</td>
+					<td>扩展区域可以加一些详细描述</td>
+					<td>
+						<textarea class="lang-html">
+							<div class="ui-msg ui-msg-ok ui-msg-page">
+								<div class="ui-msg-box" >
+									<i class="icon-ok-sign"></i>
+									<div class="ui-msg-text">正确提示信息提示信息</div>
+								</div>
+							</div>
+						</textarea>
+					</td>
+					<td>
+						我在前
+						<div class="ui-msg ui-msg-ok ui-msg-page">
+							<div class="ui-msg-box" >
+								<i class="icon-ok-sign"></i>
+								<div class="ui-msg-text">提示信息</div>
+								<div class="ui-msg-explain">
+									这里放提示的具体内容。
+									<br>
+									<a href="#">确定？</a> | <a href="#">取消</a>
+								</div>
+							</div>
+						</div>
+						我在后
+					</td>
+				</tr>
+			</tbody>
+		</table>
+		
+		<p>
+			<code>默认效果</code> <code>ui-msg-inline</code> <code>ui-msg-block</code> 三种样式是互斥的，但是可以与 <code>ui-msg-naked</code> <code>ui-msg-page</code> 组合使用，这个看你的使用场景。
+		
+		</p>
+		
+	</section>
+	
+	
+	
+	
+	
+	
+	
+</div>
+</div>
+
+</body>
+</html>

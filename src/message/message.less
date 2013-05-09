@@ -1,0 +1,129 @@
+//IE7 inline-block hack
+.ie7-inline-block() {
+  *display: inline;
+  *zoom: 1;
+}
+
+
+.ui-msg {
+	//display:block; 默认一行
+	
+	//一行
+	&.ui-msg-inline {
+		display: inline-block;
+		.ie7-inline-block();
+	}
+	
+	//block
+	&.ui-msg-block .ui-msg-box{
+		display:block;
+	}
+	
+	//可以去掉边框和背景
+	&.ui-msg-naked .ui-msg-box{
+		border-width:0px!important;
+		background:transparent!important;
+		//注意细节，没有边框时左对齐
+		>[class^="icon-"], >[class*=" icon-"] {
+			left: 0px;
+		}
+	}
+		
+	//默认有border和background-color,inline-block
+	.ui-msg-box {
+		position: relative;
+		display: inline-block;
+		.ie7-inline-block();
+		border-width:1px;
+		border-style:solid;
+		
+		//icon样式
+		>[class^="icon-"], >[class*=" icon-"] {
+			position: absolute;
+			left: 3px;
+			top: 2px;
+			font-size:16px;
+		}
+
+		//字体样式
+		>.ui-msg-text {
+			margin: 0;
+			padding: 5px 10px 5px 23px;
+			font-size: 12px;
+			line-height: 12px;
+			color: #404040;
+		}
+		
+	}
+	
+	
+	// 不同msg状态的颜色定义
+	&.ui-msg-ok .ui-msg-box {
+		border-color:#4dbf00;
+		background-color:#f0ffe5;
+		& >[class^="icon-"],& >[class*=" icon-"] {
+			color:#4dbf00;
+		}
+	}
+	&.ui-msg-error .ui-msg-box{
+		border-color:#ff8080;
+		background-color:#fff2f2;
+		& >[class^="icon-"],& >[class*=" icon-"] {
+			color:#ff8080;
+		}
+	}
+	&.ui-msg-attention .ui-msg-box{
+		border-color:#40b3ff;
+		background-color:#e5f5ff;
+		& >[class^="icon-"],& >[class*=" icon-"] {
+			color:#40b3ff;
+		}
+	}
+	&.ui-msg-tips .ui-msg-box{
+		border-color:#ffcc7f;
+		background-color:#ffffe5;
+		& >[class^="icon-"],& >[class*=" icon-"] {
+			color:#ffcc7f;
+		}
+	}
+	&.ui-msg-question .ui-msg-box{
+		border-color:#bfbfbf;
+		background-color:#f2f2f2;
+		& >[class^="icon-"],& >[class*=" icon-"] {
+			color:#bfbfbf;
+		}
+	}
+	
+	
+	
+	//页面级别定义
+	&.ui-msg-page {
+		.ui-msg-box {
+			
+			//icon样式
+			>[class^="icon-"], >[class*=" icon-"] {
+				left: 10px;
+				top: 11px;
+				font-size:32px;
+			}
+
+			//字体样式
+			>.ui-msg-text {
+				padding: 24px 10px 24px 52px;
+				font-size:14px;
+				font-weight:bold;
+			}
+			
+			//扩展内容
+			>.ui-msg-explain {
+				padding: 0px 10px 14px 42px;
+				color:gray;
+				font-size:12px;
+			}
+			
+		}
+	}
+	
+}
+
+

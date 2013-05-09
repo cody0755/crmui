@@ -1,0 +1,198 @@
+
+
+//暂时用ks-作前缀，等KISSY可以配置了再改回来吧
+
+
+/* Modules:= 公共 {{{ */
+
+	.ks-overlay-hidden {
+		visibility: hidden;
+	}
+
+	.ks-overlay-mask-hidden {
+		display: none;
+	}
+
+	.ks-overlay-shown {
+		visibility: visible;
+	}
+
+	.ks-overlay-mask-shown{
+		display: block;
+	}
+	
+	.ks-dialog, .ks-overlay {
+		position: absolute;
+		z-index:998;
+		left: -9999px;
+		top: -9999px;
+		outline: none;
+	}
+
+	.ks-dialog, .ks-popup {
+		background-color: #fff;
+		border: 1px solid #ccc;
+	}
+	
+/* }}} */
+
+
+/* Modules:= ks-dialog样式 {{{ */
+
+	.ks-dialog {
+		
+		//header
+		.ks-stdmod-header {
+			height: 35px;
+			padding-left:10px;
+			line-height: 35px;
+			font-size: 14px;
+			font-weight: bold;
+			/*渐变背景，好像好看一点*/
+			background: -webkit-gradient(linear, left top, left bottom, from(#fcfcfc), to(#f1f1f1));
+			background: -moz-linear-gradient(top, #fcfcfc, #f1f1f1);
+			filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#fcfcfc', endColorstr='#f1f1f1');
+			background: -o-linear-gradient(top, #fcfcfc, #f1f1f1);
+			background: linear-gradient(top, #fcfcfc, #f1f1f1);
+		}
+		
+		.ks-stdmod-body {
+			padding:10px;
+			background-color:#fff;
+		}
+		
+		.ks-stdmod-footer {
+			display:none;
+		}
+
+	}
+	
+/* }}} */
+
+	
+/* Modules:= 关闭按钮 {{{ */
+
+	.ks-ext-close {
+		position: absolute;
+		right: 6px;
+		top: 6px;
+		padding:2px;
+		line-height:16px;
+		overflow: hidden;
+		cursor: pointer;
+	}
+	
+	.ks-ext-close:hover {
+		text-decoration:none;
+		background-color:#eee;
+	}
+
+	.ks-ext-close .ks-ext-close-x {
+		font-size:12px;
+		color:#ccc;
+	}
+	
+/* }}} */
+
+
+/* Modules:= 遮罩 {{{ */
+
+	.ks-ext-mask {
+		background: rgba(51,51,51,0.8);
+	}
+	
+/* }}} */	
+	
+	
+/* Modules:= loading {{{ */
+
+	.ks-ext-loading {
+		background: rgba(0,0,0,0.8);
+	}
+
+	.ke-global-loading .ks-ext-loading {
+	}
+	
+/* }}} */	
+	
+
+/* Modules:= resizable {{{ */
+
+	.ks-overlay .ks-resizable-handler {
+		overflow: hidden;
+		font-size: 0;
+		line-height: 0;
+		position: absolute;
+	}
+
+	.ks-overlay .ks-resizable-handler-b {
+		height: 15px;
+		width: 100%; /*background-color: yellow;*/
+		/*-15px ie6 cross iframe shim*/
+		bottom: -15px;
+		left: 0;
+		cursor: n-resize;
+	}
+
+	.ks-overlay .ks-resizable-handler-t {
+		height: 15px;
+		width: 100%; /*background-color: yellow;*/
+		top: -15px;
+		left: 0;
+		cursor: n-resize;
+	}
+
+	.ks-overlay .ks-resizable-handler-l {
+		height: 100%;
+		width: 15px; /*background-color: yellow;*/
+		top: 0;
+		left: -15px;
+		cursor: e-resize;
+	}
+
+	.ks-overlay .ks-resizable-handler-r {
+		height: 100%;
+		width: 15px;
+		position: absolute;
+		top: 0;
+		right: -15px;
+		cursor: e-resize;
+	}
+
+	.ks-overlay .ks-resizable-handler-bl {
+		height: 15px;
+		width: 15px; /*background-color: green;*/
+		z-index: 1;
+		bottom: -15px;
+		left: -15px;
+		cursor: sw-resize;
+	}
+
+	.ks-overlay .ks-resizable-handler-br {
+		height: 15px;
+		width: 15px;
+		z-index: 1; /*background-color: green;*/
+		bottom: -15px;
+		right: -15px;
+		cursor: se-resize;
+	}
+
+	.ks-overlay .ks-resizable-handler-tl {
+		height: 15px;
+		width: 15px;
+		z-index: 1; /*background-color: green;*/
+		top: -15px;
+		left: -15px;
+		cursor: nw-resize;
+	}
+
+	.ks-overlay .ks-resizable-handler-tr {
+		height: 15px;
+		width: 15px;
+		z-index: 1; /*background-color: green;*/
+		top: -15px;
+		right: -15px;
+		cursor: ne-resize;
+	}
+	
+/* }}} */

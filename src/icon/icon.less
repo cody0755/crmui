@@ -1,0 +1,57 @@
+/* 
+ * @name: ui-iconfont
+ * @overview: REI¡ª¡ªÖ§¸¶±¦µÄiconfont
+ * @require: ÎÞ
+ */
+ 
+
+
+@FontAwesomePath:   "./font";
+
+
+@font-face {
+  font-family: 'FontAwesome';
+  src: url('@{FontAwesomePath}/fontawesome-webfont.eot?v=3.0.1');
+  src: url('@{FontAwesomePath}/fontawesome-webfont.eot?#iefix&v=3.0.1') format('embedded-opentype'),
+    url('@{FontAwesomePath}/fontawesome-webfont.woff?v=3.0.1') format('woff'),
+    url('@{FontAwesomePath}/fontawesome-webfont.ttf?v=3.0.1') format('truetype');
+//  url('@{FontAwesomePath}/fontawesome-webfont.svg#fontawesomeregular?v=3.0.1') format('svg');
+
+//  src: url('@{FontAwesomePath}/FontAwesome.otf') format('opentype');
+
+  font-weight: normal;
+  font-style: normal;
+}
+
+/*  Font Awesome styles
+    ------------------------------------------------------- */
+[class^="icon-"],
+[class*=" icon-"] {
+  font-family: FontAwesome;
+  font-weight: normal;
+  font-style: normal;
+  text-decoration: inherit;
+  -webkit-font-smoothing: antialiased;
+
+/* sprites.less reset */
+  display: inline;
+  width: auto;
+  height: auto;
+  line-height: normal;
+  vertical-align: baseline;
+  background-image: none;
+  background-position: 0% 0%;
+  background-repeat: repeat;
+  margin-top: 0;
+}
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+@import "font-awesome.less";
+@import "font-awesome-ie7.less";
+

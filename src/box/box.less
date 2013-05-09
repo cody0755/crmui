@@ -1,0 +1,96 @@
+/**
+ * @name: box
+ * @overview: 经典的box样式
+ * @creater: changyin@taobao.com
+ */
+
+
+@import "../variable.less";
+
+
+.ui-box {
+	/* for .act list */
+    position: relative;
+	
+	> .hd {
+		height: 30px; 
+		border: 1px solid #cccccc;
+		border-bottom: none;
+		
+		/*渐变背景，好像好看一点*/
+		background: -webkit-gradient(linear, left top, left bottom, from(#fcfcfc), to(#f1f1f1));
+		background: -moz-linear-gradient(top, #fcfcfc, #f1f1f1);
+		filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#fcfcfc', endColorstr='#f1f1f1');
+		background: -o-linear-gradient(top, #fcfcfc, #f1f1f1);
+		background: linear-gradient(top, #fcfcfc, #f1f1f1);
+		
+		> h3 {
+			font-size: 13px;
+			line-height: 30px; /* 11px + 5px + 5px */
+			color: #404040;
+			padding-left: 10px;
+			font-weight:normal;
+		}
+		
+	}
+	
+	//body
+	> .bd {
+		padding: 10px;
+		border: 1px solid #cccccc;
+		background-color: #fff;
+	}
+	
+	//footer
+	> .ft {
+		> .act {
+			position: absolute;
+			top: 5px;
+			right: 1px;
+			line-height: 21px;
+			padding-right: 5px;
+			
+			> li {
+				float: left;
+				padding-left: 10px;
+				
+				> a {
+					color: #404040;
+				}
+			}
+		}
+	}
+	
+	
+
+	/*---扩展功能--*/
+
+	/*下边空出10px*/
+	&.ui-box-split {
+		margin-bottom: 10px;
+	}
+
+	/*使用在box和上面的box相连的情况*/
+	&.ui-box-follow .hd{
+		border-top: 0px;
+	}
+
+	/* 圆角支持 */
+	&.ui-box-radius .hd{
+		border-radius:5px 5px 0 0;
+	}
+	&.ui-box-radius .bd{
+		border-radius:0 0 5px 5px;
+	}
+	
+}
+
+
+
+
+
+
+
+
+
+

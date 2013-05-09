@@ -1,0 +1,83 @@
+﻿<!doctype html>
+<html>
+<head>
+	<title>CRM-DPL</title>
+	<meta charset="utf-8"/>
+	<script src="http://a.tbcdn.cn/s/kissy/1.3.0/kissy.js"></script>
+	
+	<!--crm dpl-->
+	<link rel="stylesheet" type="text/css" href="../build/crm.css" />
+	<script src="../build/crm.js"></script>
+	
+	<!--docs-->
+	<link rel="stylesheet" type="text/css" href="src/docs.css" />
+	<script src="src/docs.js"></script>
+	
+	<!--所有模块-->
+	<script>var DOCS={};</script>
+	<script src="mods/list.json"></script>
+	
+	<!--代码高亮插件-->
+	<script src="src/1k/1k.js"></script>
+	<script src="src/1k/highlight.js"></script>
+	
+	
+</head>
+<body class="crm-doc">
+
+<section class="tips">
+模块还在不断完善中..
+</section>
+
+<section>
+	<h3>模块列表</h3>
+	<table class="crm-doc-table">
+		<colgroup align="center">
+			<col width="100">
+			<col width="200">
+			<col width="250"/>
+			<col width=""/>
+		</colgroup>
+		<thead>
+			<tr>
+				<th>模块名称</th>
+				<th>模块名称</th>
+				<th>维护人</th>
+				<th>模块描述</th>
+			</tr>
+		</thead>
+		<tbody id="J_Nav">
+		</tbody>
+	</table>
+</section>
+
+
+
+
+
+
+<script>
+	KISSY.ready(function(S){
+		var $ = S.all,
+			nav = $("#J_Nav");
+
+		
+		function createSubNav(data){
+			var html = "";
+			S.each(data,function(item){
+				html += '<tr><td><a href="mods/'+item.name+'.html" target="main">'+item.name+'</a><td><a href="mods/'+item.name+'.html" target="main">'+item.title+'</a></td> <td>'+item.author+'</td><td>'+item.describe+'</td></tr>';
+			});
+			nav.html(html);
+		};
+		
+		
+		createSubNav(DOCS["mods"]);
+		
+		
+	});
+</script>
+
+
+
+</body>
+</html>

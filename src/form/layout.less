@@ -1,0 +1,122 @@
+/**
+  * simple form base style 
+  * yumen t=2013-1
+  */
+
+  
+.ui-form-horizontal {
+
+	//去掉一些默认样式
+	fieldset {
+		border:0;
+	}
+	legend {
+		display: none;
+	}
+
+	//------ 表单项布局 ------//
+	> .ui-form-item {
+		margin-bottom:20px;
+		
+		.ui-form-label {
+			float: left;
+			width: 160px;
+			text-align: right;
+			line-height:30px;
+		}
+		
+		.ui-form-required {
+			color: #FF0000;
+			font-family: SimSun;
+			font-size: 14px;
+			margin-right: 6px;
+		}
+		
+		.ui-form-fields {
+			margin-left: 180px;
+			
+			.ui-form-checkbox {
+				display:block;
+				margin-top:6px;
+				&.inline{
+					display: inline-block;
+					margin-bottom: 0;
+					margin-right:10px;
+					vertical-align: middle;
+				}
+			}
+			
+			.ui-form-explain {
+				margin:5px 0 0;
+				color: #B2B2B2;
+			}
+			
+		}
+	
+	}
+	
+
+}
+
+
+
+
+/*-- 搜索样式 --*/
+.ui-form-inlie {
+	
+	.ui-form-item {
+		
+		.inline-block();
+		
+		margin-right:20px;
+		margin-top:5px;
+		margin-bottom:5px;
+		
+		.ui-form-label, .ui-form-fields {
+			.inline-block();
+			line-height:30px;
+		}
+		
+		//最后一个不需要margin-right
+		&:last-child {
+			margin-right:0px;
+		}
+		
+	}
+	
+}
+
+
+
+
+
+
+
+
+  
+  
+
+
+// minxins
+.clearfix(){
+  *zoom: 1;
+  &:after{
+    content: ' ';
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+  }
+}
+
+.inline-block(){
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+}
+
+.text-nowrap(){
+  word-break: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+}

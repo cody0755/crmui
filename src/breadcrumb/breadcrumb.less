@@ -1,0 +1,28 @@
+/**
+ * @name: breadcrumb
+ * @overview: 面包屑
+ * @creater: changyin@taobao.com
+ */
+
+
+@import "../variable.less";
+@import "../mixin.less"; 
+
+
+
+.ui-breadcrumb {
+	padding: 8px 15px;
+	margin:0 0 10px;
+	background-color: #f5f5f5;
+		> li {
+			display: inline-block;
+			.ie7-inline-block();
+				> .divider {
+					padding: 0 5px;
+					color: #ccc;
+				}
+		}
+		> .active {
+			color: #999;
+		}
+}

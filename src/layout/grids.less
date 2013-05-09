@@ -1,0 +1,110 @@
+/*
+Flying Swing Grids Layout
+原作者:玉伯(lifesinger@gmail.com)
+*/
+
+
+.ui-grid {
+	//清除浮动
+	*zoom: 1;
+	&:after{
+		content: ' ';
+		display: block;
+		height: 0;
+		clear: both;
+		visibility: hidden;
+	}
+	
+	.ui-grid-main {
+		float: left;
+		width: 100%;
+		min-height: 1px;
+	}
+	.ui-grid-sub, .ui-grid-extra {
+		float: left;
+	}
+}
+
+
+
+/***********************************************
+ * Default
+ ***********************************************/
+/* 2 Columns: .ui-grid-c2-s5 */
+.ui-grid-c2 .ui-grid-main-wrap { margin-left: 200px; }
+.ui-grid-c2 .ui-grid-sub { width: 190px; margin-left: -100%; }
+.ui-grid-c2f .ui-grid-main-wrap { margin-right: 200px; }
+.ui-grid-c2f .ui-grid-sub { width: 190px; margin-left: -190px; }
+
+/* 3 Columns: .ui-grid-c3-s5e6 */
+.ui-grid-c3 .ui-grid-main-wrap { margin: 0 240px 0 200px; }
+.ui-grid-c3 .ui-grid-sub { width: 190px; margin-left: -100%; }
+.ui-grid-c3 .ui-grid-extra { width: 230px; margin-left: -230px; }
+.ui-grid-c3f .ui-grid-main-wrap { margin: 0 200px 0 240px; }
+.ui-grid-c3f .ui-grid-sub { width: 190px; margin-left: -190px; }
+.ui-grid-c3f .ui-grid-extra { width: 230px; margin-left: -100%; }
+.ui-grid-c3e .ui-grid-main-wrap { margin-right: 440px; }
+.ui-grid-c3e .ui-grid-sub { width: 190px; margin-left: -430px; }
+.ui-grid-c3e .ui-grid-extra { width: 230px; margin-left: -230px; }
+.ui-grid-c3d .ui-grid-main-wrap { margin-right: 440px; }
+.ui-grid-c3d .ui-grid-sub { width: 190px; margin-left: -190px; }
+.ui-grid-c3d .ui-grid-extra { width: 230px; margin-left: -430px; }
+.ui-grid-c3c .ui-grid-main-wrap { margin-left: 440px; }
+.ui-grid-c3c .ui-grid-sub { width: 190px; margin-left: -100%; }
+.ui-grid-c3c .ui-grid-extra { width: 230px; margin-left: -100%; left: 200px; }
+.ui-grid-c3b .ui-grid-main-wrap { margin-left: 440px; }
+.ui-grid-c3b .ui-grid-sub { width: 190px; margin-left: -100%; left: 240px; }
+.ui-grid-c3b .ui-grid-extra { width: 230px; margin-left: -100%; }
+
+/***********************************************
+ * 2 Columns
+ * normal - main : sub
+ *      f - sub  : main
+ ***********************************************/
+/* s4 */
+.ui-grid-c2-s4 .ui-grid-main-wrap { margin-left: 160px; }
+.ui-grid-c2-s4 .ui-grid-sub { width: 150px; margin-left: -100%; }
+.ui-grid-c2-s4f .ui-grid-main-wrap { margin-right: 160px; }
+.ui-grid-c2-s4f .ui-grid-sub { width: 150px; margin-left: -150px; }
+
+/* s6 */
+.ui-grid-c2-s6 .ui-grid-main-wrap { margin-left: 240px; }
+.ui-grid-c2-s6 .ui-grid-sub { width: 230px; margin-left: -100%; }
+.ui-grid-c2-s6f .ui-grid-main-wrap { margin-right: 240px; }
+.ui-grid-c2-s6f .ui-grid-sub { width: 230px; margin-left: -230px; }
+
+/* s7 */
+.ui-grid-c2-s7 .ui-grid-main-wrap { margin-left: 280px; }
+.ui-grid-c2-s7 .ui-grid-sub { width: 270px; margin-left: -100%; }
+.ui-grid-c2-s7f .ui-grid-main-wrap { margin-right: 280px; }
+.ui-grid-c2-s7f .ui-grid-sub { width: 270px; margin-left: -270px; }
+
+/* s8 */
+.ui-grid-c2-s8 .ui-grid-main-wrap { margin-left: 320px; }
+.ui-grid-c2-s8 .ui-grid-sub { width: 310px; margin-left: -100%; }
+.ui-grid-c2-s8f .ui-grid-main-wrap { margin-right: 320px; }
+.ui-grid-c2-s8f .ui-grid-sub { width: 310px; margin-left: -310px; }
+
+/* s9 */
+.ui-grid-c2-s9 .ui-grid-main-wrap { margin-left: 360px; }
+.ui-grid-c2-s9 .ui-grid-sub { width: 350px; margin-left: -100%; }
+.ui-grid-c2-s9f .ui-grid-main-wrap { margin-right: 360px; }
+.ui-grid-c2-s9f .ui-grid-sub { width: 350px; margin-left: -350px; }
+
+/* s10 */
+.ui-grid-c2-s10 .ui-grid-main-wrap { margin-left: 400px; }
+.ui-grid-c2-s10 .ui-grid-sub { width: 390px; margin-left: -100%; }
+.ui-grid-c2-s10f .ui-grid-main-wrap { margin-right: 400px; }
+.ui-grid-c2-s10f .ui-grid-sub { width: 390px; margin-left: -390px; }
+
+/* s11 */
+.ui-grid-c2-s11 .ui-grid-main-wrap { margin-left: 440px; }
+.ui-grid-c2-s11 .ui-grid-sub { width: 430px; margin-left: -100%; }
+.ui-grid-c2-s11f .ui-grid-main-wrap { margin-right: 440px; }
+.ui-grid-c2-s11f .ui-grid-sub { width: 430px; margin-left: -430px; }
+
+/* s12 */
+.ui-grid-c2-s12 .ui-grid-main-wrap { margin-left: 480px; }
+.ui-grid-c2-s12 .ui-grid-sub { width: 470px; margin-left: -100%; }
+.ui-grid-c2-s12f .ui-grid-main-wrap { margin-right: 480px; }
+.ui-grid-c2-s12f .ui-grid-sub { width: 470px; margin-left: -470px; }

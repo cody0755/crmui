@@ -1,0 +1,172 @@
+/**
+  * simple form base style 
+  * yumen t=2013-1
+  */
+.ui-form-horizontal fieldset {
+  border: 0;
+}
+.ui-form-horizontal legend {
+  display: none;
+}
+.ui-form-horizontal > .ui-form-item {
+  margin-bottom: 20px;
+}
+.ui-form-horizontal > .ui-form-item .ui-form-label {
+  float: left;
+  width: 160px;
+  text-align: right;
+  line-height: 30px;
+}
+.ui-form-horizontal > .ui-form-item .ui-form-required {
+  color: #FF0000;
+  font-family: SimSun;
+  font-size: 14px;
+  margin-right: 6px;
+}
+.ui-form-horizontal > .ui-form-item .ui-form-fields {
+  margin-left: 180px;
+}
+.ui-form-horizontal > .ui-form-item .ui-form-fields .ui-form-checkbox {
+  display: block;
+  margin-top: 6px;
+}
+.ui-form-horizontal > .ui-form-item .ui-form-fields .ui-form-checkbox.inline {
+  display: inline-block;
+  margin-bottom: 0;
+  margin-right: 10px;
+  vertical-align: middle;
+}
+.ui-form-horizontal > .ui-form-item .ui-form-fields .ui-form-explain {
+  margin: 5px 0 0;
+  color: #B2B2B2;
+}
+/*-- ������ʽ --*/
+.ui-form-inlie .ui-form-item {
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+  margin-right: 20px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+.ui-form-inlie .ui-form-item .ui-form-label,
+.ui-form-inlie .ui-form-item .ui-form-fields {
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+  line-height: 30px;
+}
+.ui-form-inlie .ui-form-item:last-child {
+  margin-right: 0px;
+}
+.ui-form input[type="text"],
+.ui-form input[type="password"],
+.ui-form input[disabled],
+.ui-form textarea[disabled],
+.ui-form select {
+  line-height: 20px;
+  padding: 4px 6px;
+  font-size: 12px;
+  color: #555555;
+  border: 1px solid #ccc;
+  border-top-color: #a6a6a6;
+  color: #595959;
+  vertical-align: middle;
+}
+.ui-form input[type="text"],
+.ui-form input[type="password"] {
+  height: 20px;
+}
+.ui-form select {
+  height: 30px;
+  line-height: 30px;
+}
+.ui-form select[multiple],
+.ui-form select[size] {
+  height: auto;
+}
+.ui-form input[disabled],
+.ui-form select[disabled],
+.ui-form textarea[disabled],
+.ui-form input[readonly],
+.ui-form select[readonly],
+.ui-form textarea[readonly] {
+  cursor: not-allowed;
+  background-color: #eee;
+}
+.ui-form input:hover,
+.ui-form select:hover,
+.ui-form textarea:hover {
+  border: 1px #a6a6a6 solid;
+  border-top-color: #808080;
+}
+.ui-form input:focus,
+.ui-form select:focus,
+.ui-form textarea:focus {
+  border: 1px #07f solid;
+  outline: 1px #8cddff solid;
+  /* box-shadow: 0 0 3px #8cddff; */
+
+  color: #595959;
+}
+.ui-form-input,
+.ui-form-textarea,
+.ui-form-select {
+  line-height: 20px;
+  padding: 4px 6px;
+  font-size: 12px;
+  color: #555555;
+  border: 1px solid #ccc;
+  border-top-color: #a6a6a6;
+  color: #595959;
+  vertical-align: middle;
+}
+.ui-form-input[type="text"],
+.ui-form-input[type="password"] {
+  height: 20px;
+}
+.ui-form-select {
+  height: 30px;
+  line-height: 30px;
+}
+.ui-form-select[multiple],
+ui-form-select[size] {
+  height: auto;
+}
+.ui-form-disabled {
+  cursor: not-allowed;
+  background-color: #eee;
+}
+.ui-form-input:hover,
+.ui-form-textarea:hover,
+.ui-form-select:hover {
+  border: 1px #a6a6a6 solid;
+  border-top-color: #808080;
+}
+.ui-form-input:focus,
+.ui-form-textarea:focus,
+.ui-form-select:focus {
+  border: 1px #07f solid;
+  outline: 1px #8cddff solid;
+  /* box-shadow: 0 0 3px #8cddff; */
+
+  color: #595959;
+}
+.ui-input-mini {
+  width: 60px;
+}
+.ui-input-small {
+  width: 90px;
+}
+.ui-input-medium {
+  width: 190px;
+}
+.ui-input-large {
+  width: 210px;
+}
+.ui-input-xlarge {
+  width: 270px;
+}
+.ui-input-xxlarge {
+  width: 530px;
+}

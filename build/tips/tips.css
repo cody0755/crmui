@@ -1,0 +1,105 @@
+/**
+ * @name: tips
+ * @overview: ��ʾ
+ * @creater: changyin@taobao.com
+ */
+/* mixin */
+/* Modules:= tips {{{ */
+.ui-tips {
+  position: absolute;
+  max-width: 200px;
+}
+.ui-tips .ui-tips-arrow {
+  position: absolute;
+}
+.ui-tips .ui-tips-bd {
+  border: 1px solid #D1B07C;
+  background: #FFFFDA;
+  padding: 8px 10px;
+  border-radius: 2px;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.15);
+}
+.ui-tips .ui-tips-close {
+  z-index: 11;
+  position: absolute;
+  width: 19px;
+  height: 20px;
+  margin-top: 0px;
+  margin-right: -5px;
+  line-height: 20;
+  cursor: pointer;
+  opacity: 1;
+  filter: alpha(opacity=100);
+  background-image: url("http://img02.taobaocdn.com/tps/i2/T1ZUvOXdxcXXcDDk_a-19-59.gif");
+  background-position: 0 0;
+  background-repeat: no-repeat;
+}
+.ui-tips .ui-tips-close:hover {
+  cursor: pointer;
+  background-position: 0 -20px;
+}
+.ui-tips-arrow-a,
+.ui-tips-arrow-b {
+  z-index: 10;
+  height: 19px;
+  width: 17px;
+  font-family: Simsun;
+  font-size: 16px;
+  line-height: 21px;
+  overflow: hidden;
+  position: absolute;
+}
+.ui-tips-arrow-a {
+  color: #D1B07C;
+  font-style: normal;
+}
+.ui-tips-arrow-b {
+  color: #FFFFDA;
+}
+/* }}} */
+/* Modules:= ��ͬ���� {{{ */
+.ui-tips-top .ui-tips-arrow {
+  right: 30px;
+  top: -10px;
+}
+.ui-tips-top .ui-tips-arrow-b {
+  top: 2px;
+}
+.ui-tips-top .ui-tips-close {
+  top: 3px;
+  right: 8px;
+}
+.ui-tips-bottom .ui-tips-arrow {
+  right: 30px;
+  bottom: 10px;
+}
+.ui-tips-bottom .ui-tips-arrow-b {
+  top: -2px;
+}
+.ui-tips-bottom .ui-tips-close {
+  top: 3px;
+  right: 8px;
+}
+.ui-tips-left .ui-tips-arrow {
+  top: 30px;
+  left: -8px;
+}
+.ui-tips-left .ui-tips-arrow-b {
+  left: 2px;
+}
+.ui-tips-left .ui-tips-close {
+  top: 3px;
+  right: 8px;
+}
+.ui-tips-right .ui-tips-arrow {
+  top: 30px;
+  right: 8px;
+}
+.ui-tips-right .ui-tips-arrow-b {
+  left: -2px;
+}
+.ui-tips-right .ui-tips-close {
+  top: 3px;
+  right: 8px;
+}
+/* }}} */

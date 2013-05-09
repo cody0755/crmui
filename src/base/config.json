@@ -1,0 +1,6 @@
+{
+	"name":		"base",
+	"title":	"基础",
+	"describe":	"包括基础的reset和几个公用的function",
+	"author":	"常胤（satans17@gmail.com）"
+}

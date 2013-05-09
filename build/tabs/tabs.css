@@ -1,0 +1,44 @@
+/**
+ * @name: tabs
+ * @overview: ����ʱҪ�ø��ģ�˭��������ģ���������¸���
+ * @creater: changyin@taobao.com
+ */
+.ks-tabs-panel {
+  display: none;
+}
+.ks-tabs-panel.ks-tabs-panel-selected {
+  display: inherit;
+}
+.ks-tabs {
+  *zoom: 1;
+}
+.ks-tabs:before,
+.ks-tabs:after {
+  display: table;
+  content: "";
+}
+.ks-tabs:after {
+  clear: both;
+}
+.ks-tabs.ks-tabs-default .ks-tabs-bar {
+  height: 32px;
+  padding: 0 10px;
+  border-bottom: 1px solid #e0e0e0;
+}
+.ks-tabs.ks-tabs-default .ks-tabs-bar .ks-tabs-tab {
+  float: left;
+  padding: 0 16px;
+  height: 31px;
+  line-height: 31px;
+  background-color: #f6f6f6;
+  border-top: 1px solid #e0e0e0;
+  border-left: 1px solid #e0e0e0;
+  border-radius: 3px 3px 0 0 ;
+}
+.ks-tabs.ks-tabs-default .ks-tabs-bar .ks-tabs-tab.ks-tabs-tab-selected {
+  height: 32px;
+  background-color: #fff;
+}
+.ks-tabs.ks-tabs-default .ks-tabs-bar .ks-tabs-tab:last-child {
+  border-right: 1px solid #e0e0e0;
+}

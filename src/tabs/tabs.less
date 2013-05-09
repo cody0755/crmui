@@ -1,0 +1,66 @@
+/**
+ * @name: tabs
+ * @overview: 我临时要用搞的，谁负责这个模块可以重新搞下
+ * @creater: changyin@taobao.com
+ */
+
+	.ui-clear_(){
+		*zoom: 1;
+		&:before,
+		&:after {
+			display: table;
+			content: "";
+		}
+		&:after {
+			clear: both;
+		}
+	}
+	
+	
+	.ks-tabs-panel{
+		display:none;
+		&.ks-tabs-panel-selected{
+			display:inherit;
+		}
+	}
+
+	
+	.ks-tabs {
+		.ui-clear_();
+		
+		//默认样式
+		&.ks-tabs-default {
+			
+			.ks-tabs-bar {
+				height:32px;
+				padding:0 10px;
+				border-bottom:1px solid #e0e0e0;
+				
+				.ks-tabs-tab {
+					float:left;
+					padding:0 16px;
+					height:31px;
+					line-height:31px;
+					background-color:#f6f6f6;
+					border-top:1px solid #e0e0e0;
+					border-left:1px solid #e0e0e0;
+					border-radius:3px 3px 0 0 ;
+					
+					&.ks-tabs-tab-selected {
+						height:32px;
+						background-color:#fff;
+					}
+					
+				}
+				.ks-tabs-tab:last-child {
+					border-right:1px solid #e0e0e0;
+				}
+				
+			}
+			
+		}
+		
+	}
+	
+	
+

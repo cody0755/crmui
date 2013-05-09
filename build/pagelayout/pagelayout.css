@@ -1,0 +1,134 @@
+/**
+ * @name: pagelayout
+ * @overview: �ṩ����Ĭ�ϵĲ�����ʽ
+ * @creater: changyin@taobao.com
+ */
+/**
+ * @name: layou-default
+ * @overview: �򵥵ĺ�̨����
+ * @creater: changyin@taobao.com
+ */
+.ui-pagelayout .layout-header {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 50px;
+  background-color: #317408;
+  border-bottom: 1px solid #b3b3b3;
+  box-shadow: 0 0 5px #C3C3C3;
+  z-index: 20;
+}
+.ui-pagelayout .layout-header h1 {
+  float: left;
+  padding-left: 10px;
+}
+.ui-pagelayout .layout-header h1 a {
+  font: normal 22px/50px 'Microsoft YaHei';
+  color: #fff;
+  text-decoration: none;
+}
+.ui-pagelayout .layout-header .nav {
+  float: left;
+  margin-left: 100px;
+}
+.ui-pagelayout .layout-header .nav li {
+  float: left;
+  margin-right: 20px;
+  line-height: 50px;
+}
+.ui-pagelayout .layout-header .nav li a {
+  color: #ccc;
+}
+.ui-pagelayout .layout-header .nav li.current a {
+  color: #fff;
+  font-weight: bold;
+}
+/**
+ * @name: layou-default
+ * @overview: ������̨����
+ * @creater: changyin@taobao.com
+ */
+.pagelayout-opoa {
+  overflow: hidden;
+}
+.pagelayout-opoa .layout-header,
+.pagelayout-opoa .layout-subnav {
+  position: absolute;
+}
+.pagelayout-opoa .layout-header {
+  top: 0;
+  left: 0;
+}
+.pagelayout-opoa .layout-subnav {
+  left: 0px;
+  top: 50px;
+  width: 230px;
+  height: 100%;
+  padding: 10px;
+  z-index: 6;
+  background-color: #eee;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.pagelayout-opoa .layout-subnav .nav li {
+  margin-bottom: 5px;
+}
+.pagelayout-opoa .layout-subnav .nav li a {
+  display: block;
+  padding: 5px 10px;
+  border-width: 1px 0;
+  border-style: bold;
+  font-size: 14px;
+  text-decoration: none;
+}
+.pagelayout-opoa .layout-subnav .nav li a:hover {
+  background-color: #e1e1e1;
+  border-color: #d2d2d2;
+}
+.pagelayout-opoa .layout-content {
+  padding: 10px;
+  z-index: 7;
+  position: absolute;
+  left: 230px;
+  top: 50px;
+  right: 0px;
+  bottom: 0px;
+  border-left: 1px solid #c6c8cc;
+  box-shadow: 0 0 8px #C3C3C3;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  overflow: auto;
+}
+/**
+ * @name: layou-default
+ * @overview: �򵥵ĺ�̨����
+ * @creater: changyin@taobao.com
+ */
+.pagelayout-simple .layout-content {
+  margin-top: 10px;
+}
+.pagelayout-simple .layout-subnav {
+  min-height: 500px;
+  background-color: #eee;
+  border: 1px solid #d2d2d2;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.pagelayout-simple .layout-subnav .nav li {
+  margin-bottom: 5px;
+}
+.pagelayout-simple .layout-subnav .nav li a {
+  display: block;
+  padding: 5px 10px;
+  border-width: 1px 0;
+  border-style: bold;
+  font-size: 14px;
+  text-decoration: none;
+}
+.pagelayout-simple .layout-subnav .nav li a:hover {
+  background-color: #e1e1e1;
+  border-color: #d2d2d2;
+}
