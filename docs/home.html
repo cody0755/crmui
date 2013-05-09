@@ -1,204 +1,176 @@
-﻿<!doctype html>
-<html>
-<head>
-	<title>CRM-DPL</title>
-	<meta charset="utf-8"/>
-	<script src="http://a.tbcdn.cn/s/kissy/1.3.0/kissy.js"></script>
-	
-	<!--crm dpl-->
-	<link rel="stylesheet" type="text/css" href="../build/crm.css" />
-	<script src="../build/crm.js"></script>
-	
-	<!--docs-->
-	<link rel="stylesheet" type="text/css" href="src/docs.css" />
-	<script src="src/docs.js"></script>
-	
-	<!--所有模块-->
-	<script>var DOCS={};</script>
-	<script src="mods/list.json"></script>
-	
-	<!--代码高亮插件-->
-	<script src="src/1k/1k.js"></script>
-	<script src="src/1k/highlight.js"></script>
-	
-	
-</head>
-<body class="crm-doc">
 
-
-<section>
-	<h3>什么是DPL（Design Pattern Library）</h3>
-	<p>下面这张图很清晰的描述了DPL的功能和组成</p>
-	<p><img src="src/dpl.png" /></p>
-	<p>下面摘录了一些对DPL的具体描述</p>
-	<ul class="list">
-		<li>视觉规范和交互规范，以用户研究作为基础。比如全站的色调，基本操作的交互等，都取决于对主流客户群心智模型的研究。</li>
-		<li>前端技术相对独立，在规范的基础上，封装成技术框架供上层调用。这里的框架仅包括基本功能，比如css框架里的reset和grids，js框架里的dom、event等，不含widgets.</li>
-		<li>再上一层是设计模式库DPL(Design Pattern Library). 大部分模式的形成，需要视觉、交互和前端三种技术的融合。比如淘宝首页的幻灯片卡盘，不仅仅是前端技术的产物，和淘宝的视觉规范与交互设计也密切相关。</li>
-		<li>DPL是一份文档化的说明，面向的是UED全体设计人员。DPL的背面是技术实现，一般体现在JS框架里，比如YUI的widgets库，jQuery的UI插件库等等，这些封装好的代码组件面向的是程序开发人员。</li>
-		<li>在DPL之上，可以构建各种应用。比如Yahoo的首页，Google的GMail. 每个公司的DPL各不相同，体现的是一个公司整体的设计观。</li>
-		<li>DPL负责的是通用模式。具体应用中的特殊模式，还需要直接根据前端框架、视觉规范、交互规范以及用研数据来完成设计和开发。</li>
-		<li>DPL初期的构建和维护成本很高，但一旦有效运作起来后，团队将获得丰厚的回报。</li>
-	</ul>
-</section>
+<div class="crm-doc crm-doc-page">
 
 
 
-<section>
-	<h3>什么是 CRM-DPL</h3>
-	<p>
-	CRM-DPL希望做成一套后台通用的UI组建库，除了整合常用的组件，我们还将加入更多的应用案例，让开发同学能即拷即用。<br/>
-	我们希望，开发同学能使用CRM-DPL的组件能直接搭建出视觉、交互体验一致后台页面，而不用依赖UED。我们也希望CRM-DPL能减少前端的工作量。<br/>
-	目前还处于第一个版本，我们将尽快完善，欢迎大家多提意见和需求。
-	</p>
-</section>
+	<section>
+		<h2>关于 CRM-UI</h2>
+		<p>
+		CRM-UI希望做成一套后台通用的UI组建库，除了整合常用的组件，我们还将加入更多的应用案例，让开发同学能即拷即用。<br/>
+		我们希望，开发同学能使用CRM-UI的组件能直接搭建出视觉、交互体验一致后台页面，而不用依赖UED。我们也希望CRM-UI能减少前端的工作量。<br/>
+		目前还处于第一个版本，我们将尽快完善，欢迎大家多提意见和需求。
+		<br/>
+		CRM-UI参考了著名的<a href="http://twitter.github.io/bootstrap/">bootstrap</a>，<a href="http://aliceui.org/">aliceui</a>，Javascript部分依赖<a href="http://docs.kissyui.com/">KISSY</a>，icon部分使用的是<a href="http://fortawesome.github.io/Font-Awesome/">Font-Awesome</a>
+		</p>
+		<p><img src="src/img/logo.jpg"	/></p>	
+	</section>
+
+
+	<section>
+		<h2>兼容性</h2>		
+		<div class="ui-msg ui-msg-error ui-msg-naked">
+			<div class="ui-msg-box">
+				<i class="icon-remove-circle"></i>
+				<div class="ui-msg-text">申明：CRM-Ui不兼容IE6/IE7，以后也没准备兼容。以后尽量向html5支持得比较好的浏览器发展，让html5的新特性给我们更好的体验。</div>
+			</div>
+		</div>
+		<table class="ui-table" style="width:500px;">
+			<thead>
+				<tr>
+					<th>IE</th>
+					<th>Chrome</th>
+					<th>Firefox</th>
+					<th>safari</th>
+					<th>opera</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td><i class="icon-angle-right"></i> IE7</td> 
+					<td><i class="icon-ok"></i></td>
+					<td><i class="icon-ok"></i></td>
+					<td><i class="icon-ok"></i></td>
+					<td><i class="icon-ok"></i></td>
+				</tr>
+			</tbody>
+		</table>
+
+	</section>
 
 
 
+	<h2>CRM-UI使用向导</h2>
+
+	<section class="demo-section">
+	<h3>第一步：新建一个空的html文档</h3>
+	<textarea class="lang-html"><!doctype html>
+	<html>
+	<head>
+		<title>CRM-UI</title>
+		<meta charset="utf-8"/>
+	</head>
+	<body>
+		<p>CRM DPL 使用指南</p>
+	</body>
+	</html>
+	</textarea>
+	</section>
 
 
-<section>
-	<h3>CRM-DPL模块列表</h3>
-	<table class="crm-doc-table">
-		<colgroup align="center">
-			<col width="100">
-			<col width="200">
-			<col width="250"/>
-			<col width=""/>
-		</colgroup>
-		<thead>
-			<tr>
-				<th>模块名称</th>
-				<th>模块名称</th>
-				<th>维护人</th>
-				<th>模块描述</th>
-			</tr>
-		</thead>
-		<tbody id="J_Nav">
-		</tbody>
-	</table>
-	<script>
-		KISSY.ready(function(S){
-			var $ = S.all,
-				nav = $("#J_Nav");
-
-			function createSubNav(data){
-				var html = "";
-				S.each(data,function(item){
-					html += '<tr><td><a href="mods/'+item.name+'.html" target="main">'+item.name+'</a><td><a href="mods/'+item.name+'.html" target="main">'+item.title+'</a></td> <td>'+item.author+'</td><td>'+item.describe+'</td></tr>';
-				});
-				nav.html(html);
-			};
-
-			createSubNav(DOCS["mods"]);
-		});
-	</script>
-</section>
-
-
-
-
-<h2>CRM-DPL使用向导</h2>
-
-<section class="demo-section">
-<h3>第一步：新建一个空的html文档</h3>
-<textarea class="lang-html"><!doctype html>
-<html>
-<head>
-	<title>CRM-DPL</title>
-	<meta charset="utf-8"/>
-</head>
-<body>
-	<p>CRM DPL 使用指南</p>
-</body>
-</html>
-</textarea>
-</section>
-
-
-<section class="demo-section">
-<h3>第二步：引入CRM-DPL库</h3>
-<textarea class="lang-html">
-<html>
-<head>
-	<title>CRM-DPL</title>
-	<meta charset="utf-8"/>
-	<!--crm dpl-->
-	<!--crm-dpl发布后再改成CDN的地址-->
-	<script src="http://a.tbcdn.cn/s/kissy/1.3.0/kissy.js"></script>
-	<link rel="stylesheet" type="text/css" href="../build/crm.css" />
-	<script src="../build/crm.js"></script>
-	<!--crm dpl-->
-</head>
-<body>
-	<p>CRM DPL 使用指南</p>
-</body>
-</html>
-</textarea>
-</section>
+	<section class="demo-section">
+	<h3>第二步：引入CRM-UI库</h3>
+	<textarea class="lang-html">
+	<html>
+	<head>
+		<title>CRM-UI</title>
+		<meta charset="utf-8"/>
+		<!--crm dpl-->
+		<!--CRM-UI发布后再改成CDN的地址-->
+		<script src="http://a.tbcdn.cn/s/kissy/1.3.0/kissy.js"></script>
+		<link rel="stylesheet" type="text/css" href="../build/crmui.css" />
+		<script src="../build/crmui.js"></script>
+		<!--crm dpl-->
+	</head>
+	<body>
+		<p>CRM DPL 使用指南</p>
+	</body>
+	</html>
+	</textarea>
+	</section>
 
 
 
-<section class="demo-section">
-<h3>第三步：按照示例引入你要使用的模块</h3>
-<p>下面的示例，我们加入一个box模块</p>
-<textarea class="lang-html">
-<html>
-<head>
-	<title>CRM-DPL</title>
-	<meta charset="utf-8"/>
-	<!--crm dpl-->
-	<!--crm-dpl发布后再改成CDN的地址-->
-	<script src="http://a.tbcdn.cn/s/kissy/1.3.0/kissy.js"></script>
-	<link rel="stylesheet" type="text/css" href="../build/crm.css" />
-	<script src="../build/crm.js"></script>
-	<!--crm dpl-->
-</head>
-<body>
-	<!--box模块-->
-	<div class="crm-box">
+	<section class="demo-section">
+	<h3>第三步：按照示例引入你要使用的模块</h3>
+	<p>下面的示例，我们加入一个box模块</p>
+	<textarea class="lang-html">
+	<html>
+	<head>
+		<title>CRM-UI</title>
+		<meta charset="utf-8"/>
+		<!--crm dpl-->
+		<!--CRM-UI发布后再改成CDN的地址-->
+		<script src="http://a.tbcdn.cn/s/kissy/1.3.0/kissy.js"></script>
+		<link rel="stylesheet" type="text/css" href="../build/crmui.css" />
+		<script src="../build/crmui.js"></script>
+		<!--crm dpl-->
+	</head>
+	<body>
+		<!--box模块-->
+		<div class="ui-box">
+			<div class="hd"><h3>box</h3></div>
+			<div class="bd">
+				<button type="button" class="ui-btn crm-btn-info">提交</button>
+			</div>
+			<div class="ft">
+				<ul class="act">
+					<li>
+						<a >更多&gt;</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<!--box模块-->
+	</body>
+	</html>
+	</textarea>
+	<p>效果如下：</p>
+	<div class="ui-box">
 		<div class="hd"><h3>box</h3></div>
 		<div class="bd">
-			<button type="button" class="crm-btn crm-btn-info">提交</button>
+			<button type="button" class="ui-btn crm-btn-info">提交</button>
 		</div>
 		<div class="ft">
 			<ul class="act">
 				<li>
-					<a href="#">更多&gt;</a>
+					<a >更多&gt;</a>
 				</li>
 			</ul>
 		</div>
 	</div>
-	<!--box模块-->
-</body>
-</html>
-</textarea>
-<p>效果如下：</p>
-<div class="crm-box">
-	<div class="hd"><h3>box</h3></div>
-	<div class="bd">
-		<button type="button" class="crm-btn crm-btn-info">提交</button>
-	</div>
-	<div class="ft">
-		<ul class="act">
-			<li>
-				<a href="#">更多&gt;</a>
-			</li>
-		</ul>
-	</div>
+	</section>
+
+
+
+	<section class="demo-section">
+	<h3>源码下载地址</h3>
+	<textarea class="lang-html">
+	https://github.com/satans17/crmdpl
+	</textarea>
+	</section>
+
+
+				
+<!-- Duoshuo Comment BEGIN -->
+	<div class="ds-thread"></div>
+<script type="text/javascript">
+var duoshuoQuery = {short_name:"crm-ui"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = 'http://static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		|| document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+<!-- Duoshuo Comment END -->	
+				
+				
+				
+				
+				
+				
+				
+
 </div>
-</section>
-
-
-
-<section class="demo-section">
-<h3>源码下载地址</h3>
-<textarea class="lang-html">
-http://svn.app.taobao.net/repos/fed/trunk/fed/service-team/crmdpl
-</textarea>
-</section>
-
-
-
-</body>
-</html>

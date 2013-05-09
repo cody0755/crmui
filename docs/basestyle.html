@@ -1,0 +1,881 @@
+<div class="wrapper" id="basestyle">
+	<aside class="subnav">
+		<ul>
+			<li><a data-href="box">box <span>盒子</span></a></li>
+			<li><a data-href="breadcrumb">breadcrumb <span>面包屑</span></a></li>
+			<li><a data-href="button">button <span>按钮</span></a></li>
+			<li><a data-href="dialog">dialog <span>对话框</span></a></li>
+			<li><a data-href="form">form <span> 表单</span></a></li>
+			<li><a data-href="icon">icon <span>图标</span></a></li>
+			<li><a data-href="layout">layout <span>布局</span></a></li>
+			<li><a data-href="loading">loading <span>loading效果</span></a></li>
+			<li><a data-href="message">message <span>消息提醒</span></a></li>
+			<li><a data-href="paging">paging <span>分页器</span></a></li>
+			<li><a data-href="table">table <span>表格</span></a></li>
+			<li><a data-href="tabs">tabs <span>tab</span></a></li>
+			<li><a data-href="tips">tips <span>提示</span></a></li>
+		</ul>
+	</aside>
+	<div class="mainbody">
+	
+		<div class="ui-msg ui-msg-attention ui-msg-naked  ui-msg-page">
+			<div class="ui-msg-box">
+				<i class="icon-info-sign"></i>
+				<div class="ui-msg-text">点击各模块标题，可进入模块的详细介绍和用法</div>
+			</div>
+		</div>
+	
+		<section class="demosection">
+			<h3><a data-href="box" href="basestyle/box.html" target="_blank">box</a></h3>
+			<h4>淘宝经典盒子</h4>
+			<div class="demo">
+				<h5>灰色box</h5>
+				<div class="ui-box">
+					<div class="hd"><h3>默认的box样式</h3></div>
+					<div class="bd"><p>这是内容</p><p>这是内容</p></div>
+					<div class="ft">
+						<ul class="act">
+							<li>
+								<a href="#">更多&gt;</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<textarea class="lang-html">
+					<div class="ui-box">
+						<div class="hd"><h3>默认的box样式</h3></div>
+						<div class="bd"><p>这是内容</p><p>这是内容</p></div>
+						<div class="ft">
+							<ul class="act">
+								<li>
+									<a href="#">更多&gt;</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</textarea>
+			</div>
+		</section>
+		
+		
+		
+	
+		<section class="demosection">
+			<h3><a data-href="breadcrumb" href="basestyle/breadcrumb.html" target="_blank">breadcrumb</a></h3>
+			<h4>面包屑</h4>
+			<div class="demo">
+				<h5>默认</h5>
+				<ul class="ui-breadcrumb">
+					<li><a href="#">CRM首页</a> <span class="divider">&gt;</span></li>
+					<li><a href="#">维权</a> <span class="divider">&gt;</span></li>
+					<li class="active">降权</li>
+				</ul>
+				<textarea class="lang-html">
+					<ul class="ui-breadcrumb">
+						<li><a href="#">CRM首页</a> <span class="divider">&gt;</span></li>
+						<li><a href="#">维权</a> <span class="divider">&gt;</span></li>
+						<li class="active">降权</li>
+					</ul>
+				</textarea>
+			</div>
+		</section>
+		
+		
+		
+		<section class="demosection">
+			<h3><a data-href="button" href="basestyle/button.html" target="_blank">button</a></h3>
+			<h4>按钮</h4>
+			<div class="demo">
+				<h5>按钮颜色</h5>
+				<button type="button" class="ui-btn">Default</button>
+				<button type="button" class="ui-btn ui-btn-primary">Primary</button>
+				<button type="button" class="ui-btn ui-btn-info">Info</button>
+				<button type="button" class="ui-btn ui-btn-success">Success</button>
+				<button type="button" class="ui-btn ui-btn-warning">Warning</button>
+				<textarea class="lang-html">
+					<button type="button" class="ui-btn">Default</button>
+					<button type="button" class="ui-btn ui-btn-primary">Primary</button>
+					<button type="button" class="ui-btn ui-btn-info">Info</button>
+					<button type="button" class="ui-btn ui-btn-success">Success</button>
+					<button type="button" class="ui-btn ui-btn-warning">Warning</button>
+				</textarea>
+			</div>
+		</section>
+		
+		
+		
+		<section class="demosection">
+			<h3><a data-href="dialog" href="basestyle/dialog.html" target="_blank">dialog</a></h3>
+			<h4>对话框</h4>
+			<div class="demo">
+				<button id="btn-dialog" type="button" class="ui-btn">点我显示对话框</button>
+				<script>
+				KISSY.use("node,overlay", function (S, Node, O, B) {
+					var dialog = new O.Dialog({
+						width:500,
+						headerContent:'对话框标题',
+						bodyContent:'<div style="height:200px;">test</div>',
+						//footerContent:'<button id="btn" type="button" class="ui-btn ui-btn-small">确定</button>',
+						mask:{
+							effect:'fade'
+						},
+						align:{
+							points:['cc', 'cc'],
+						},
+						resizeable:true
+					});
+
+
+					Node.all("#btn-dialog").on("click", function () {
+						dialog.show();
+						console.log(dialog);
+					});
+				});
+				</script>
+			</div>
+		</section>
+		
+
+		<section class="demosection">
+			<h3><a data-href="form" href="basestyle/form.html" target="_blank">form</a></h3>
+			<h4>表单样式</h4>
+			<div class="demo">
+
+				<form class="ui-form ui-form-horizontal" name="" method="post" action="#" id="">
+
+
+					
+					<div class="ui-form-item">
+						<label for="" class="ui-form-label">
+							<span class="ui-form-required">*</span>用户名
+						</label>
+						<div class="ui-form-fields">
+							<input class="ui-form-input" type="text" value="changyin@taobao.com" > <span class="ui-form-other"><a href="#">什么是用户名？</a></span>
+							<div class="ui-form-explain">
+								<div class="ui-msg ui-msg-ok ui-msg-naked">
+									<div class="ui-msg-box" >
+										<i class="icon-ok-sign"></i>
+										<div class="ui-msg-text">输入正确</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="ui-form-item">
+						<label for="" class="ui-form-label">
+							<span class="ui-form-required">*</span>密码
+						</label>
+						<div class="ui-form-fields">
+							<input class="ui-form-input" type="password" value="123456"> <span class="ui-form-other"><a href="#">添加备注</a></span>
+							<div class="ui-form-explain">
+								<div class="ui-msg ui-msg-error ui-msg-naked">
+									<div class="ui-msg-box" >
+										<i class="icon-remove-circle"></i>
+										<div class="ui-msg-text">至少8位</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="ui-form-item">
+						<label for="" class="ui-form-label">
+							<span class="ui-form-required">*</span>性别
+						</label>
+						<div class="ui-form-fields">
+							<label class="ui-form-checkbox inline"><input name="sex" type="radio"> 男</label>
+							<label class="ui-form-checkbox inline"><input name="sex" type="radio"> 女</label>
+							<label class="ui-form-checkbox inline"><input name="sex" type="radio"> 其他</label>
+						</div>
+					</div>
+					
+					<div class="ui-form-item">
+						<label for="" class="ui-form-label">
+							<span class="ui-form-required">*</span>籍贯
+						</label>
+						<div class="ui-form-fields">
+							<select class="ui-form-select"><option>湖北</option></select> <select class="ui-form-select"><option>红安</option></select>
+							<p class="ui-form-explain">默认文案。</p>
+						</div>
+					</div>
+					
+					<div class="ui-form-item">
+						<label for="" class="ui-form-label">
+							<span class="ui-form-required">*</span>有效证件号码
+						</label>
+						<div class="ui-form-fields">
+							<input class="ui-form-input ui-input-medium" type="text" disabled="true">
+							<p class="ui-form-explain">暂时不需要</p>
+						</div>
+					</div>
+					
+					
+					<div class="ui-form-item">
+						<label for="" class="ui-form-label">
+							<span class="ui-form-required">*</span>联系地址
+						</label>
+						<div class="ui-form-fields">
+							<input class="ui-form-input ui-input-xxlarge" type="text">
+						</div>
+					</div>
+					
+					<div class="ui-form-item">
+						<label for="" class="ui-form-label">
+							<span class="ui-form-required">*</span>想去的地方
+						</label>
+						<div class="ui-form-fields">
+							<select class="ui-form-select" multiple="multiple">
+								<option>美利坚</option>
+								<option>北朝鲜</option>
+								<option>尼日利亚</option>
+								<option>火星</option>
+								<option>西藏</option>
+								<option>新疆</option>
+								<option>赞比亚</option>
+								<option>中华人民共和国</option>
+							<select>
+						</div>
+					</div>
+					
+					<div class="ui-form-item">
+						<label for="" class="ui-form-label">
+							<span class="ui-form-required">*</span>爱好
+						</label>
+						<div class="ui-form-fields">
+							<label class="ui-form-checkbox inline"><input type="checkbox"> 体育</label>
+							<label class="ui-form-checkbox inline"><input type="checkbox"> 电影</label>
+							<label class="ui-form-checkbox inline"><input type="checkbox"> 音乐</label>
+							<label class="ui-form-checkbox inline"><input type="checkbox"> 游戏</label>
+							<label class="ui-form-checkbox inline"><input type="checkbox"> 旅游</label>
+							<label class="ui-form-checkbox inline"><input type="checkbox"> 艺术</label>
+							<p class="ui-form-explain">默认文案。</p>
+						</div>
+					</div>
+					
+					<div class="ui-form-item">
+						<label for="" class="ui-form-label">
+							<span class="ui-form-required">*</span>申请理由
+						</label>
+						<div class="ui-form-fields">
+							<textarea cols="50" rows="5" class="ui-form-textarea" placeholder="理由不少于100条"></textarea>
+							<p class="ui-form-explain">默认文案。</p>
+						</div>
+					</div>
+					
+					<div class="ui-form-item">
+						<div class="ui-form-fields">
+							<label class="ui-form-checkbox"><input type="checkbox"> 我已阅读并接受自主缴费服务协议</label>
+							<label class="ui-form-checkbox"><input type="checkbox"> 我已阅读并接受淘宝网用户协议</label>
+						</div>
+					</div>
+					
+					
+					<div class="ui-form-item">
+						<label for="" class="ui-form-label">
+							<span class="ui-form-required">*</span>验证码
+						</label>
+						<div class="ui-form-fields">
+							<input class="ui-form-input ui-input-mini" type="text">
+						</div>
+					</div>
+					
+					<div class="ui-form-item">
+						<div class="ui-form-fields">
+							<button type="button" class="ui-btn ui-btn-primary">确定</button>
+							<button type="button" class="ui-btn">取消</button>
+						</div>
+					</div>
+					
+				</form>
+			</div>
+		</section>
+		
+		
+		
+		
+		
+		
+		
+		<section class="demosection">
+			<h3><a data-href="icon" href="basestyle/icon.html" target="_blank">icon</a></h3>
+			<h4>icon</h4>
+			<p>所有icon列表请查看<a href="basestyle/icon.html" target="_blank">icon</a>模块</p>
+			<p>引用方式非常简单，如果你想插入一个相机的icon,插入代码 <code>&lt;i class="icon-camera"&gt;&lt;/i&gt;</code> 即可。 <i class="icon-camera"></i></p>		
+			
+			<div class="demo ui-clear">
+				<style>.the-icons li{float:left;width:200px;margin:0 10px 10px 0;}</style>
+				<ul class="the-icons ui-clear">
+				  <li><i class="icon-adjust"></i> icon-adjust</li>
+				  <li><i class="icon-asterisk"></i> icon-asterisk</li>
+				  <li><i class="icon-ban-circle"></i> icon-ban-circle</li>
+				  <li><i class="icon-bar-chart"></i> icon-bar-chart</li>
+				  <li><i class="icon-barcode"></i> icon-barcode</li>
+				  <li><i class="icon-beaker"></i> icon-beaker</li>
+				  <li><i class="icon-beer"></i> icon-beer</li>
+				  <li><i class="icon-bell"></i> icon-bell</li>
+				  <li><i class="icon-bell-alt"></i> icon-bell-alt</li>
+				  <li><i class="icon-bolt"></i> icon-bolt</li>
+				  <li><i class="icon-book"></i> icon-book</li>
+				  <li><i class="icon-bookmark"></i> icon-bookmark</li>
+				  <li><i class="icon-bookmark-empty"></i> icon-bookmark-empty</li>
+				  <li><i class="icon-briefcase"></i> icon-briefcase</li>
+				  <li><i class="icon-bullhorn"></i> icon-bullhorn</li>
+				  <li><i class="icon-calendar"></i> icon-calendar</li>
+				  <li><i class="icon-camera"></i> icon-camera</li>
+				  <li><i class="icon-camera-retro"></i> icon-camera-retro</li>
+				  <li><i class="icon-certificate"></i> icon-certificate</li>
+				  <li><i class="icon-check"></i> icon-check</li>
+				  <li><i class="icon-check-empty"></i> icon-check-empty</li>
+				  <li><i class="icon-circle"></i> icon-circle</li>
+				  <li><i class="icon-circle-blank"></i> icon-circle-blank</li>
+				  <li><i class="icon-cloud"></i> icon-cloud</li>
+				  <li><i class="icon-cloud-download"></i> icon-cloud-download</li>
+				  <li><i class="icon-cloud-upload"></i> icon-cloud-upload</li>
+				  <li><i class="icon-coffee"></i> icon-coffee</li>
+				  <li><i class="icon-cog"></i> icon-cog</li>
+				  <li><i class="icon-cogs"></i> icon-cogs</li>
+				  <li><i class="icon-comment"></i> icon-comment</li>
+				  <li><i class="icon-comment-alt"></i> icon-comment-alt</li>
+				  <li><i class="icon-comments"></i> icon-comments</li>
+				  <li><i class="icon-comments-alt"></i> icon-comments-alt</li>
+				  <li><i class="icon-credit-card"></i> icon-credit-card</li>
+				  <li><i class="icon-dashboard"></i> icon-dashboard</li>
+				  <li><i class="icon-desktop"></i> icon-desktop</li>
+				  <li><i class="icon-download"></i> icon-download</li>
+				  <li><i class="icon-download-alt"></i> icon-download-alt</li>
+				</ul>
+				
+			</div>
+		</section>	
+		
+
+		
+		
+		
+		
+		
+		<section class="demosection">
+			<h3><a data-href="layout" href="basestyle/layout.html" target="_blank">layout</a></h3>
+			<h4>布局</h4>
+			  <style>
+				.ui-grid{
+					background: #f3f3f3;
+					margin-bottom: 10px;
+				}
+				.ui-grid .ui-grid-sub{
+					background:#DBEDF6;
+				}
+				.ui-grid .ui-grid-extra{
+					background:#EAFBEA;
+				}
+				
+				.test-box{
+					padding: 10px;
+					height: 20px;
+					border: 1px dashed #aaa;
+				}
+			  </style>
+			<div class="demo">
+
+				<h5>布局</h5>
+				<p>两栏：.grid-c2f 顺序颠倒</p>
+				
+				<div class="ui-grid ui-grid-c2f">
+					<div class="ui-grid-main">
+						<div class="ui-grid-main-wrap">
+							<div class="test-box">其他都是一样的，只要在class后面加一个f，例如<code>.ui-grid-c2</code> , <code>.ui-grid-c2f</code></div>
+						</div>
+					</div>
+					<div class="ui-grid-sub">
+						<div class="test-box">sub</div>
+					</div>
+				</div>
+
+
+
+			
+
+				<p>两栏：.ui-grid-c2-s4</p>
+				<div class="ui-grid ui-grid-c2-s4">
+					<div class="ui-grid-main">
+						<div class="ui-grid-main-wrap">
+							<div class="test-box">main</div>
+						</div>
+					</div>
+					<div class="ui-grid-sub">
+						<div class="test-box">150</div>
+					</div>
+				</div>
+
+
+				<p>两栏：.grid-c2</p>
+				<div class="ui-grid ui-grid-c2">
+					<div class="ui-grid-main">
+						<div class="ui-grid-main-wrap">
+							<div class="test-box">main</div>
+						</div>
+					</div>
+					<div class="ui-grid-sub">
+						<div class="test-box">190</div>
+					</div>
+				</div>	
+		  
+
+				<p>两栏：.ui-grid-c2-s6</p>
+				<div class="ui-grid ui-grid-c2-s6">
+					<div class="ui-grid-main">
+						<div class="ui-grid-main-wrap">
+							<div class="test-box">main</div>
+						</div>
+					</div>
+					<div class="ui-grid-sub">
+						<div class="test-box">230</div>
+					</div>
+				</div>
+
+				<textarea class="lang-html">
+				
+				<div class="ui-grid ui-grid-c2f">
+					<div class="ui-grid-main">
+						<div class="ui-grid-main-wrap">
+							<div class="test-box">其他都是一样的，只要在class后面加一个f，例如<code>.ui-grid-c2</code> , <code>.ui-grid-c2f</code></div>
+						</div>
+					</div>
+					<div class="ui-grid-sub">
+						<div class="test-box">sub</div>
+					</div>
+				</div>
+
+
+
+			
+
+				<p>两栏：.ui-grid-c2-s4</p>
+				<div class="ui-grid ui-grid-c2-s4">
+					<div class="ui-grid-main">
+						<div class="ui-grid-main-wrap">
+							<div class="test-box">main</div>
+						</div>
+					</div>
+					<div class="ui-grid-sub">
+						<div class="test-box">150</div>
+					</div>
+				</div>
+
+
+				<p>两栏：.grid-c2</p>
+				<div class="ui-grid ui-grid-c2">
+					<div class="ui-grid-main">
+						<div class="ui-grid-main-wrap">
+							<div class="test-box">main</div>
+						</div>
+					</div>
+					<div class="ui-grid-sub">
+						<div class="test-box">190</div>
+					</div>
+				</div>	
+		  
+
+				<p>两栏：.ui-grid-c2-s6</p>
+				<div class="ui-grid ui-grid-c2-s6">
+					<div class="ui-grid-main">
+						<div class="ui-grid-main-wrap">
+							<div class="test-box">main</div>
+						</div>
+					</div>
+					<div class="ui-grid-sub">
+						<div class="test-box">230</div>
+					</div>
+				</div>
+				</textarea>
+				
+			</div>
+		</section>
+		
+		
+		
+		
+		
+		
+		<section class="demosection">
+			<h3><a data-href="loading" href="basestyle/loading.html" target="_blank">loading</a></h3>
+			<h4>loading效果</h4>
+			<div class="demo">
+			<i class="icon-spinner icon-spin" style="font-size:24px;"></i>
+			</div>
+		</section>
+		
+		
+		
+		
+		<section class="demosection">
+			<h3><a data-href="message" href="basestyle/message.html" target="_blank">message</a></h3>
+			<h4>消息提示</h4>
+			<div class="demo">
+				<h5>消息提示</h5>
+			
+				<div class="ui-msg ui-msg-ok">
+					<div class="ui-msg-box" >
+						<i class="icon-ok-sign"></i>
+						<div class="ui-msg-text">正确 提示信息提示信息 比如：交易成功</div>
+					</div>
+				</div>
+				
+				<br>
+				
+				<div class="ui-msg ui-msg-error">
+					<div class="ui-msg-box" >
+						<i class="icon-remove-circle"></i>
+						<div class="ui-msg-text">错误 提示信息提示信息 比如：请正确选择省市区</div>
+					</div>
+				</div>
+				
+				<br>
+						
+				<div class="ui-msg ui-msg-error">
+					<div class="ui-msg-box" >
+						<i class="icon-minus-sign"></i>
+						<div class="ui-msg-text">禁止 提示信息提示信息</div>
+					</div>
+				</div>
+				
+				<br>
+				
+				<div class="ui-msg ui-msg-attention">
+					<div class="ui-msg-box" >
+						<i class="icon-info-sign"></i>
+						<div class="ui-msg-text">提示 提示信息提示信息 比如：建议您联系卖家咨询货物是否已经发出</div>
+					</div>
+				</div>
+				
+				<br>
+		
+				<div class="ui-msg ui-msg-ok ui-msg-page">
+					<div class="ui-msg-box" >
+						<i class="icon-ok-sign"></i>
+						<div class="ui-msg-text">正确提示信息提示信息</div>
+						<div class="ui-msg-explain">
+							视觉规范和交互规范，以用户研究作为基础。比如全站的色调，基本操作的交互等，都取决于对主流客户群心智模型的研究。
+							<br>
+							<a href="#">你确定吗？</a> | <a href="#">就这样吧</a>
+						</div>
+					</div>
+				</div>
+				
+				<textarea class="lang-html">
+			
+				<div class="ui-msg ui-msg-ok">
+					<div class="ui-msg-box" >
+						<i class="icon-ok-sign"></i>
+						<div class="ui-msg-text">正确 提示信息提示信息 比如：交易成功</div>
+					</div>
+				</div>
+				
+				<br>
+				
+				<div class="ui-msg ui-msg-error">
+					<div class="ui-msg-box" >
+						<i class="icon-remove-circle"></i>
+						<div class="ui-msg-text">错误 提示信息提示信息 比如：请正确选择省市区</div>
+					</div>
+				</div>
+				
+				<br>
+						
+				<div class="ui-msg ui-msg-error">
+					<div class="ui-msg-box" >
+						<i class="icon-minus-sign"></i>
+						<div class="ui-msg-text">禁止 提示信息提示信息</div>
+					</div>
+				</div>
+				
+				<br>
+				
+				<div class="ui-msg ui-msg-attention">
+					<div class="ui-msg-box" >
+						<i class="icon-info-sign"></i>
+						<div class="ui-msg-text">提示 提示信息提示信息 比如：建议您联系卖家咨询货物是否已经发出</div>
+					</div>
+				</div>
+				
+				<br>
+		
+				<div class="ui-msg ui-msg-ok ui-msg-page">
+					<div class="ui-msg-box" >
+						<i class="icon-ok-sign"></i>
+						<div class="ui-msg-text">正确提示信息提示信息</div>
+						<div class="ui-msg-explain">
+							视觉规范和交互规范，以用户研究作为基础。比如全站的色调，基本操作的交互等，都取决于对主流客户群心智模型的研究。
+							<br>
+							<a href="#">你确定吗？</a> | <a href="#">就这样吧</a>
+						</div>
+					</div>
+				</div>
+				</textarea>
+
+			</div>
+		</section>	
+		
+		
+		
+		
+		
+		
+		
+		
+		<section class="demosection">
+			<h3><a data-href="paging" href="basestyle/paging.html" target="_blank">paging</a></h3>
+			<h4>分页样式</h4>
+			<div class="demo">
+				<h5>简单分页</h5>
+				<div class="ui-paging">
+					<a class="ui-paging-item ui-paging-prev">上一页</a>
+					<a class="ui-paging-item">1</a>
+					<a class="ui-paging-item ui-paging-break">...</a>
+					<a class="ui-paging-item">3</a>
+					<a class="ui-paging-item ui-paging-current">4</a>
+					<a class="ui-paging-item">5</a>
+					<a class="ui-paging-item ui-paging-break">...</a>
+					<a class="ui-paging-item">100</a>
+					<a class="ui-paging-item ui-paging-next">下一页</a>
+				</div>
+				
+				<textarea class="lang-html">
+				<div class="ui-paging">
+					<a class="ui-paging-item ui-paging-prev">上一页</a>
+					<a class="ui-paging-item">1</a>
+					<a class="ui-paging-item ui-paging-break">...</a>
+					<a class="ui-paging-item">3</a>
+					<a class="ui-paging-item ui-paging-current">4</a>
+					<a class="ui-paging-item">5</a>
+					<a class="ui-paging-item ui-paging-break">...</a>
+					<a class="ui-paging-item">100</a>
+					<a class="ui-paging-item ui-paging-next">下一页</a>
+				</div>
+				</textarea>
+			</div>
+
+			<div class="demo">
+				<h5>带边框的分页</h5>
+				<div class="ui-paging ui-paging-box">
+					<a class="ui-paging-item ui-paging-prev">上一页</a>
+					<a class="ui-paging-item ui-paging-first">首页</a>
+					<a class="ui-paging-item ui-paging-current">1</a>
+					<a class="ui-paging-item">2</a>
+					<a class="ui-paging-item ui-paging-break">...</a>
+					<a class="ui-paging-item">100</a>
+					<a class="ui-paging-item ui-paging-last">尾页</a>
+					<a class="ui-paging-item ui-paging-next">下一页</a>
+					<div class="ui-paging-skip">
+						<form action="" method="get" name="" id="">
+							共100页，去第<input type="text" value="1" size="3" class="ui-page-skipTo" name="jumpto">页
+							<button class="ui-btn-s ui-page-skipBtn" type="submit">确定</button>
+						</form>
+					</div>
+				</div>
+				
+				
+				<textarea class="lang-html">
+				<div class="ui-paging ui-paging-box">
+					<a class="ui-paging-item ui-paging-prev">上一页</a>
+					<a class="ui-paging-item ui-paging-first">首页</a>
+					<a class="ui-paging-item ui-paging-current">1</a>
+					<a class="ui-paging-item">2</a>
+					<a class="ui-paging-item ui-paging-break">...</a>
+					<a class="ui-paging-item">100</a>
+					<a class="ui-paging-item ui-paging-last">尾页</a>
+					<a class="ui-paging-item ui-paging-next">下一页</a>
+					<div class="ui-paging-skip">
+						<form action="" method="get" name="" id="">
+							共100页，去第<input type="text" value="1" size="3" class="ui-page-skipTo" name="jumpto">页
+							<button class="ui-btn-s ui-page-skipBtn" type="submit">确定</button>
+						</form>
+					</div>
+				</div>
+				</textarea>
+			
+			</div>
+		</section>
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		<section class="demosection">
+			<h3><a data-href="table" href="basestyle/table.html" target="_blank">table</a></h3>
+			<h4>表格</h4>
+			<div class="demo">
+
+				<h5>普通表格</h5>
+				<table class="ui-table">
+					<colgroup align="center">
+						<col width="50">
+						<col width="100">
+						<col width="">
+						<col width="200">		
+					</colgroup>
+					<thead>
+						<tr>
+							<th>id</th>
+							<th>作者</th>
+							<th>标题</th>
+							<th>发布时间</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>1</td>
+							<td>satans17</td>
+							<td class="ui-table-alginleft">CBU（阿里巴巴中国站）有经营行为的卖家账户暂时无法在淘宝开店</td>
+							<td>2013-01-30 11:52:07</td>
+						</tr>
+						<tr>
+							<td>2</td>
+							<td>mayun</td>
+							<td>休闲娱乐类目下商品页面无法打开问题通知</td>
+							<td>2013-01-30 11:52:07</td>
+						</tr>
+						<tr>
+							<td>3</td>
+							<td>lucy</td>
+							<td>关于搜索诊断助手中实物交易指数的解答口径</td>
+							<td>2013-01-30 11:52:07</td>
+						</tr>
+						<tr>
+							<td>4</td>
+							<td>admin</td>
+							<td>支付宝CRM故障导致淘宝小二无法查询支付宝问题通知（已恢复）</td>
+							<td>2013-01-30 11:52:07</td>
+						</tr>
+						<tr>
+							<td>5</td>
+							<td>baidu</td>
+							<td>CBU（阿里巴巴中国站）有经营行为的卖家账户暂时无法在淘宝开店</td>
+							<td>2013-01-30 11:52:07</td>
+						</tr>
+					</tbody>
+				</table>
+	
+				<textarea class="lang-html">
+
+				<p>普通表格</p>
+				<table class="ui-table">
+					<colgroup align="center">
+						<col width="50">
+						<col width="100">
+						<col width="">
+						<col width="200">		
+					</colgroup>
+					<thead>
+						<tr>
+							<th>id</th>
+							<th>作者</th>
+							<th>标题</th>
+							<th>发布时间</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>1</td>
+							<td>satans17</td>
+							<td class="ui-table-alginleft">CBU（阿里巴巴中国站）有经营行为的卖家账户暂时无法在淘宝开店</td>
+							<td>2013-01-30 11:52:07</td>
+						</tr>
+						<tr>
+							<td>2</td>
+							<td>mayun</td>
+							<td>休闲娱乐类目下商品页面无法打开问题通知</td>
+							<td>2013-01-30 11:52:07</td>
+						</tr>
+						<tr>
+							<td>3</td>
+							<td>lucy</td>
+							<td>关于搜索诊断助手中实物交易指数的解答口径</td>
+							<td>2013-01-30 11:52:07</td>
+						</tr>
+						<tr>
+							<td>4</td>
+							<td>admin</td>
+							<td>支付宝CRM故障导致淘宝小二无法查询支付宝问题通知（已恢复）</td>
+							<td>2013-01-30 11:52:07</td>
+						</tr>
+						<tr>
+							<td>5</td>
+							<td>baidu</td>
+							<td>CBU（阿里巴巴中国站）有经营行为的卖家账户暂时无法在淘宝开店</td>
+							<td>2013-01-30 11:52:07</td>
+						</tr>
+					</tbody>
+				</table>
+				</textarea>
+			</div>
+		</section>
+		
+		
+		
+		
+		
+		
+		<section class="demosection">
+			<h3><a data-href="tabs" href="basestyle/tabs.html" target="_blank">tabs</a></h3>
+			<h4>tabs</h4>
+			<div class="demo">
+				
+				<div id="tabs-default" class="ks-tabs ks-tabs-default">
+					<div class="ks-tabs-bar">
+						<div class="ks-tabs-tab ks-button ks-tabs-tab-selected">Section 1</div>
+						<div class="ks-tabs-tab ks-button">Section 2</div>
+						<div class="ks-tabs-tab ks-button">Section 3</div>
+					</div>
+					<div class="ks-tabs-body">
+						<div class="ks-tabs-panel ks-tabs-panel-selected">
+							<p>I'm in Section 1.</p>
+						</div>
+						<div class="ks-tabs-panel">
+							<p>Howdy, I'm in Section 2.</p>
+						</div>
+						<div class="ks-tabs-panel">
+							<p>What up girl, this is Section 3.</p>
+						</div>
+					</div>
+				</div>
+				<script>
+					KISSY.use("tabs", function (S, Tabs) {
+						S.all("#tabs-default").each(function (n) {
+							new Tabs({
+								aria:false,
+								srcNode: n
+							}).render();
+						});
+					});   
+				</script>
+				
+				
+			</div>
+		</section>	
+		
+		
+		
+		
+	
+	</div>
+</div>
+
+
+
+
+<script>
+KISSY.use("doc/basestyle", function(S, BaseStyle){
+	BaseStyle();
+});
+</script>
+
+
+

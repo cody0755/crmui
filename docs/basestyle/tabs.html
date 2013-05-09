@@ -1,0 +1,105 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<meta name="description" content="专为后台项目开发的前端UI模版">
+	<meta name="author" content="TAOBAO-UED-UDC">		
+	<title>tabs</title>
+	<link rel="stylesheet" href="../../build/crm.css" />
+	<link rel="stylesheet" href="../src/style.css" />
+	<script src="http://a.tbcdn.cn/s/kissy/1.3.0/kissy.js"></script>
+	
+	
+	<!--代码高亮插件-->
+	<script src="../src/1k/1k.js"></script>
+	<script src="../src/1k/highlight.js"></script>
+	
+	<script>
+	KISSY.ready(function(S){
+		$1k.highlight.init({    //组件初始化
+			skin:'crm',//默认皮肤
+			edit:true,//开启编辑运行
+			JsRequire:''//导入js
+		});
+	});
+	</script>
+	
+</head>
+<body>
+
+
+<div  class="crm-doc"  >
+
+<section>
+	<h3>tabs基本样式</h3>
+<div class="ks-tabs ks-tabs-default">
+    <div class="ks-tabs-bar">
+        <div class="ks-tabs-tab ks-button ks-tabs-tab-selected">Section 1</div>
+        <div class="ks-tabs-tab ks-button">Section 2</div>
+        <div class="ks-tabs-tab ks-button">Section 3</div>
+    </div>
+    <div class="ks-tabs-body">
+        <div class="ks-tabs-panel ks-tabs-panel-selected">
+            <p>I'm in Section 1.</p>
+        </div>
+        <div class="ks-tabs-panel">
+            <p>Howdy, I'm in Section 2.</p>
+        </div>
+        <div class="ks-tabs-panel">
+            <p>What up girl, this is Section 3.</p>
+        </div>
+    </div>
+</div>
+<p>html结构如下：</p>
+<textarea class="lang-html">
+<div class="ks-tabs ks-tabs-top">
+    <div class="ks-tabs-bar">
+        <div class="ks-tabs-tab ks-button ks-tabs-tab-selected">Section 1</div>
+        <div class="ks-tabs-tab ks-button">Section 2</div>
+        <div class="ks-tabs-tab ks-button">Section 3</div>
+    </div>
+    <div class="ks-tabs-body">
+        <div class="ks-tabs-panel ks-tabs-panel-selected">
+            <p>I'm in Section 1.</p>
+        </div>
+        <div class="ks-tabs-panel">
+            <p>Howdy, I'm in Section 2.</p>
+        </div>
+        <div class="ks-tabs-panel">
+            <p>What up girl, this is Section 3.</p>
+        </div>
+    </div>
+</div>
+</textarea>
+<p>初始化脚本，发现KISSY的前缀配置修改得不彻底，这里暂时初始化不了<p>
+<textarea class="lang-js">
+KISSY.use("tabs", function (S, Tabs) {
+    S.all(".ks-tabs").each(function (n) {
+        new Tabs({
+            srcNode: n
+        }).render();
+    });
+});   
+</textarea>
+<script>
+KISSY.use("tabs", function (S, Tabs) {
+    S.all(".ks-tabs").each(function (n) {
+        new Tabs({
+			aria:false,
+            srcNode: n
+        }).render();
+    });
+});   
+</script>
+</section>
+	
+
+
+	
+	
+	
+</div>
+
+</body>
+</html>
+

@@ -1,0 +1,158 @@
+
+<div class="crm-doc crm-doc-page">
+
+	
+	<div class="ui-msg ui-msg-attention ui-msg-page">
+		<div class="ui-msg-box" >
+			<i class="icon-ok-sign"></i>
+			<div class="ui-msg-text">关于widget</div>
+			<div class="ui-msg-explain">
+				1、可以引用所有的<a href="http://docs.kissyui.com/" target="_blank">KISSY组件</a>，我们会逐步重写所有的组件默认样式，以统一CRM-UI的风格。<br>
+				2、可以引用所有gallery组件。<br/>
+				3、后续我们会组不加入一些特殊的业务组件，比如常用的业务类型树。
+			</div>
+		</div>
+	</div>
+	
+	<p>&nbsp;</p>
+		
+
+
+	<section class="demo-section">
+		<h3>dialog组件</h3>
+		<p>dialog组件非常灵活，详见<a href="http://docs.kissyui.com/docs/html/api/component/overlay/index.html">API文档</a>，<a href="http://docs.kissyui.com/docs/html/demo/component/overlay/index.html">更多demo</a></p>
+		<textarea class="lang-html">
+			<button id="btn" type="button" class="ui-btn">显示dialog</button>
+			&lt;script>
+			KISSY.use("node,overlay", function (S, Node, O) {
+				var dialog = new O.Dialog({
+					width:500,
+					headerContent:'对话框标题',
+					bodyContent:'<div style="height:200px;">test</div>',
+					mask:{
+						effect:'fade'
+					},
+					align:{
+						points:['cc', 'cc'],
+					},
+					resizeable:true
+				});
+
+
+				Node.all("#btn").on("click", function () {
+					dialog.show();
+					console.log(dialog);
+				});
+			});
+			&lt;/script>
+		</textarea>
+	
+		<button id="btn" type="button" class="ui-btn">显示dialog</button>
+
+		<script>
+		KISSY.use("node,overlay", function (S, Node, O) {
+			var dialog = new O.Dialog({
+				width:500,
+				headerContent:'对话框标题',
+				bodyContent:'<div style="height:200px;">test</div>',
+				mask:{
+					effect:'fade'
+				},
+				align:{
+					points:['cc', 'cc'],
+				},
+				resizeable:true
+			});
+
+
+			Node.all("#btn").on("click", function () {
+				dialog.show();
+				console.log(dialog);
+			});
+		});
+		</script>
+	</section>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<section class="demo-section">
+		<h3>dialog组件</h3>
+		
+		<div id="tab-demo" class="ks-tabs ks-tabs-default">
+			<div class="ks-tabs-bar">
+				<div class="ks-tabs-tab ks-button ks-tabs-tab-selected">Section 1</div>
+				<div class="ks-tabs-tab ks-button">Section 2</div>
+				<div class="ks-tabs-tab ks-button">Section 3</div>
+			</div>
+			<div class="ks-tabs-body">
+				<div class="ks-tabs-panel ks-tabs-panel-selected">
+					<p>I'm in Section 1.</p>
+				</div>
+				<div class="ks-tabs-panel">
+					<p>Howdy, I'm in Section 2.</p>
+				</div>
+				<div class="ks-tabs-panel">
+					<p>What up girl, this is Section 3.</p>
+				</div>
+			</div>
+		</div>
+		<script>
+			KISSY.use("tabs", function (S, Tabs) {
+					new Tabs({
+						srcNode: "#tab-demo"
+					}).render();
+			});   
+		</script>
+		<textarea class="lang-html">
+			<div id="tab-demo" class="ks-tabs ks-tabs-default">
+				<div class="ks-tabs-bar">
+					<div class="ks-tabs-tab ks-button ks-tabs-tab-selected">Section 1</div>
+					<div class="ks-tabs-tab ks-button">Section 2</div>
+					<div class="ks-tabs-tab ks-button">Section 3</div>
+				</div>
+				<div class="ks-tabs-body">
+					<div class="ks-tabs-panel ks-tabs-panel-selected">
+						<p>I'm in Section 1.</p>
+					</div>
+					<div class="ks-tabs-panel">
+						<p>Howdy, I'm in Section 2.</p>
+					</div>
+					<div class="ks-tabs-panel">
+						<p>What up girl, this is Section 3.</p>
+					</div>
+				</div>
+			</div>
+			&lt;/script>
+				KISSY.use("tabs", function (S, Tabs) {
+						new Tabs({
+							srcNode: "#tab-demo"
+						}).render();
+				});   
+			&lt;/script>
+		</textarea>
+	</section>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+
+
+</div>
